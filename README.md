@@ -1,9 +1,7 @@
 # 💌 Mobile Wedding Invitation 💌
 
 React와 Typescript를 기반으로 개발되었으며, Vite를 사용하여 빠르고 간편한 개발 환경을 제공합니다. 
-esli
 갤러리는 react-photoswipe-gallery, 지도는 react-naver-maps 를 사용했습니다.
-js-confetti를 이용하여 귀여운 컨페티 기능을 넣었습니다.
 
 
 

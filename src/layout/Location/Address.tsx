@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import data from 'data.json';
-import { Caption, PointTitle } from '@/components/Text.tsx';
+import { Caption } from '@/components/Text.tsx';
 import { ILocationInfo } from '@/types/data.ts';
 
 const Address = () => {
@@ -11,7 +11,7 @@ const Address = () => {
         const { title, desc } = item;
         return (
           <Way key={title}>
-            <PointTitle>{title}</PointTitle>
+            <>{title}</>
             <Caption>{desc}</Caption>
           </Way>
         );

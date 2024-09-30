@@ -1,30 +1,21 @@
 import styled from '@emotion/styled';
 
-export const Heading1 = styled.p`
-  font-family: HSSanTokki20-Regular, serif;
-  font-size: 1.5rem;
-  margin: 10px;
-  color: #e88ca6;
-  white-space: pre-line;
+export const Title = styled.p`
+  font-family: 'GowunBatang', serif;
+  font-size: 2.5rem;
 `;
 
-export const Heading2 = styled.p`
-  font-size: 1rem;
-  margin: 10px;
-  white-space: pre-line;
-`;
-
-export const PointTitle = styled.p`
-  font-family: HSSanTokki20-Regular, serif;
-  line-height: 1;
-  margin: 0;
-  color: #e88ca6;
-  white-space: pre-line;
+export const SubTitle = styled.p`
+  font-family: 'GowunDodum';
 `;
 
 export const Paragraph = styled.p`
-  line-height: 2.2rem;
+  font-family: 'SUIT', sans-serif;
   white-space: pre-line;
+`;
+
+export const CustomEn = styled.p`
+  font-family: 'SometimesTimes';
 `;
 
 export const Caption = styled.p<{ textAlign?: string }>`
