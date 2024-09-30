@@ -1,0 +1,99 @@
+{
+  "greeting": {
+    "title": "000\n000",
+    "host": {
+      "groom": {
+        "name": "영준",
+        "relation": "아들",
+        "position": "신랑",
+        "parents": [
+          {
+            "relation": "아버지",
+            "name": "최병홍"
+          },
+          {
+            "relation": "어머니",
+            "name": "성정옥"
+          }
+        ]
+      },
+      "bride": {
+        "name": "다빈",
+        "relation": "딸",
+        "position": "신부",
+        "parents": [
+          {
+            "relation": "아버지",
+            "name": "김용대"
+          },
+          {
+            "relation": "어머니",
+            "name": "이  선"
+          }
+        ]
+      }
+    },
+    "eventDetail": "2025년 3월 1일(토) 3시 40분\n여의도 여율리 5층",
+    "eventDay": "2025년 3월 1일 토요일 | 오후 15시 40분"
+  },
+  "hostInfo": [
+    {
+      "host": "신랑측",
+      "accountInfo": [
+        {
+          "name": "최병홍",
+          "relation": "신랑 아버지",
+          "bank": "농협",
+          "account": "123-45-678901"
+        },
+        {
+          "name": "성정옥",
+          "relation": "신랑 어머니",
+          "bank": "농협",
+          "account": "123-45-678901"
+        },
+        {
+          "name": "최영준",
+          "relation": "신랑",
+          "bank": "신한",
+          "account": "1234-56-789012",
+          "kakaopayAccount": "",
+          "tossAccount": ""
+        }
+      ]
+    },
+    {
+      "host": "신부측",
+      "accountInfo": [
+        {
+          "name": "김용대",
+          "relation": "신부 아버지",
+          "bank": "국민",
+          "account": "123-45-678901"
+        },
+        {
+          "name": "이   선",
+          "relation": "신부 어머니",
+          "bank": "신한",
+          "account": "123-45-678901"
+        },
+        {
+          "name": "김다빈",
+          "relation": "신부",
+          "bank": "신한",
+          "account": "1234-5678-9012",
+          "kakaopayAccount": "https://link.kakaopay.com/_/Q-ULgFw",
+          "tossAccount": ""
+        }
+      ]
+    }
+  ],
+  "mapInfo": {
+    "address1": "웨딩 여율리 5층",
+    "address2": "서울 영등포구 국제금융로6길 26",
+    "naverMap": "https://map.naver.com/p/directions/-/14129458.7483733,4512095.3697976,%EC%9B%A8%EB%94%A9%EC%97%AC%EC%9C%A8%EB%A6%AC,30811749,PLACE_POI/-/transit?c=15.00,0,0,0,dh",
+    "kakaoMap": "https://map.kakao.com/?map_type=TYPE_MAP&target=car&rt=,,489503,1123003&rt1=&rt2=%EC%97%AC%EC%9C%A8%EB%A6%AC%EC%9B%A8%EB%94%A9%ED%99%80&rtIds=,630786038",
+    "lat": 37.5219546930167,
+    "lon": 126.92697361375
+  }
+}
