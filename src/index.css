@@ -87,6 +87,11 @@ body {
   display: var(--el-flex);
   justify-content: var(--el-center);
   color: rgba(85, 85, 85, 85);
+  background: var(--color-white);
+}
+
+.root {
+  background: var(--bg-sub2);
 }
 
 :root {
@@ -107,7 +112,6 @@ body {
   --bg-sub: #eef3f4;
   --bg-sub2: #afc8d4;
   --color-point: #7aa3b8;
-  --color-point: #7aa3b8;
 
   --el-flex: flex;
   --el-center: center;
@@ -121,22 +125,38 @@ body {
 @font-face {
   font-family: 'GowunBatang';
   src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'GowunBatang';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Bold.woff') format('woff');
+  font-weight: 600;
 }
 
 @font-face {
   font-family: 'GowunDodum';
   src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff') format('woff');
   font-weight: normal;
-  font-style: normal;
 }
 
 @font-face {
   font-family: 'SUIT';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Thin.woff2') format('woff2');
+  font-weight: 300;
+}
+
+
+@font-face {
+  font-family: 'SUIT';
   src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'SUIT';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Bold.woff2') format('woff2');
+  font-weight: 600;
 }
 
 @font-face {

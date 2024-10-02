@@ -1,18 +1,28 @@
 import styled from '@emotion/styled';
 import data from 'data.json';
-import AccountWrap from './AccountWrap.tsx';
-import Accordion from '@/components/Accordion.tsx';
+import AccountDetail from './AccountDetail.tsx';
+import Accordion from '@/layout/Account/Accordion.tsx';
+import { TitleCont } from '@/components/ContentsWrap';
+import { Title } from '@/components/ContentsFont.tsx';
 
 const Account = () => {
   const { hostInfo } = data;
   return (
-    <HostInfoWrapper>
+    <AccountWrap>
+      <TitleCont>
+        <Title>마음 전하실 곳</Title>
+        <hr />
+        <Title style={{ fontSize: '0.875rem' }}>
+          참석이 어려우신 분들을 위해 기재하였습니다 <br />
+          너그러운 마음으로 양해부탁드립니다
+        </Title>
+      </TitleCont>
       {hostInfo.map((host) => {
         return (
           <Accordion title={host.host} key={host.host}>
             {host.accountInfo.map((account) => {
               return (
-                <AccountWrap
+                <AccountDetail
                   key={account.name}
                   name={account.name}
                   relation={account.relation}
@@ -26,15 +36,21 @@ const Account = () => {
           </Accordion>
         );
       })}
-    </HostInfoWrapper>
+    </AccountWrap>
   );
 };
 
 export default Account;
 
-const HostInfoWrapper = styled.div`
-  display: flex;
-  width: 90%;
-  flex-direction: column;
-  padding: 20px;
+const AccountWrap = styled.div`
+  width: 100%;
+  background: var(--color-white2);
+  padding: calc(var(--el-between) * 4) calc(var(--el-between) * 2.5);
+  hr {
+    width: 2.25rem;
+    height: 1px;
+    background: var(--color-black2);
+    margin: 2rem auto;
+  }
 `;
+

@@ -2,7 +2,6 @@ import styled from '@emotion/styled';
 
 export const Title = styled.p`
   font-family: 'GowunBatang', serif;
-  font-size: 2.5rem;
 `;
 
 export const SubTitle = styled.p`
@@ -16,10 +15,9 @@ export const Paragraph = styled.p`
 
 export const CustomEn = styled.p`
   font-family: 'SometimesTimes';
+  font-size: calc(var(--font-size) * 2.375);
+  color: var(--color-black2);
+  letter-spacing: 1.5px;
+  opacity: 0.9;
 `;
 
-export const Caption = styled.p<{ textAlign?: string }>`
-  font-weight: 200;
-  text-align: ${(props) => (props.textAlign ? props.textAlign : 'start')};
-  white-space: pre-line;
-`;

@@ -1,24 +1,32 @@
 import styled from '@emotion/styled';
 
 export const Container = styled.div`
+  background: var(--bg-sub2);
+`;
+
+export const Wrapper = styled.div`
   max-width: 28.125rem;
   display: var(--el-flex);
   align-items: var(--el-center);
-  justify-content: var(--el-center);
-  background: var(--bg-body);
+  flex-direction: var(--el-column);
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  background: var(--color-white);
 `;
-
-export const Wrapper = styled.div``;
 
 export const Wrap = styled.section`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem 1.375rem;
+  display: var(--el-flex);
+  align-items: var(--el-center);
+  flex-direction: var(--el-column);
+  padding: calc(var(--el-between) * 8) calc(var(--el-between) * 2.5);
+  & hr {
+    width: 100%;
+    border: 0;
+    border-top: 1px solid var(--color-point);
+    margin-top: 1rem;
+  }
 `;
 
-export const GalleryWrapper = styled.div`
+export const GalleryWrap = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -26,3 +34,8 @@ export const GalleryWrapper = styled.div`
   padding-left: 0;
   padding-right: 0;
 `;
+
+export const TitleCont = styled.div`
+  padding: calc(var(--el-between) * 3) 0 calc(var(--el-between) * 4);
+`;
+

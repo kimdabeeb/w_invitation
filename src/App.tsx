@@ -1,12 +1,15 @@
 import { useEffect, useRef, useState } from 'react';
 import { NavermapsProvider } from 'react-naver-maps';
-import { Container, Wrapper, GalleryWrapper } from '@/components/ContentsWrap';
-import Account from '@/layout/Account/Account.tsx';
+import { Container, Wrapper, GalleryWrap } from '@/components/ContentsWrap';
+import Intro from '@/layout/Invitation/Intro';
+import ShareBox from '@/layout/Invitation/ShareBox';
+import CalendarWrap from '@/layout/Calendar/CalendarWrap';
+import HostContact from '@/layout/Contact/HostContact';
+import SendMessage from '@/layout/Contact/SendMessage';
+import PhotoGallery from '@/layout/Gallery/PhotoGallery';
+import Location from '@/layout/Location/Location';
+import Account from '@/layout/Account/Account';
 import FloatingBar from '@/layout/FloatingBar/FloatingBar.tsx';
-import GalleryWrap from '@/layout/Gallery/GalleryWrap.tsx';
-import Guestbook from '@/layout/Guestbook/Guestbook.tsx';
-import Location from '@/layout/Location/Location.tsx';
-import Intro from '@/layout/Main/Intro';
 
 function App() {
   const ncpClientId = import.meta.env.VITE_APP_NAVERMAPS_CLIENT_ID;
@@ -38,12 +41,15 @@ function App() {
       <Container>
         <Wrapper>
           <Intro />
-          <GalleryWrapper ref={galleryRef}>
-            <GalleryWrap />
-          </GalleryWrapper>
-          <Account />
+          <CalendarWrap />
+          <HostContact />
+          <GalleryWrap ref={galleryRef}>
+            <PhotoGallery />
+          </GalleryWrap>
           <Location />
-          <Guestbook />
+          <Account />
+          <SendMessage />
+          <ShareBox />
           <FloatingBar isVisible={isVisible} />
         </Wrapper>
       </Container>

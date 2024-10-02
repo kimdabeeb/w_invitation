@@ -2,9 +2,7 @@
 import styled from '@emotion/styled';
 // import { increment, onValue, ref, update } from 'firebase/database';
 // import { realtimeDb } from 'firebase.ts';
-import Share from '@/assets/icons/share.svg?react';
 import Upward from '@/assets/icons/upward.svg?react';
-import Button from '@/components/Button.tsx';
 
 const FloatingBar = ({ isVisible }: { isVisible: boolean }) => {
 
@@ -18,17 +16,6 @@ const FloatingBar = ({ isVisible }: { isVisible: boolean }) => {
   //     setCount(Number(snapshot.val()));
   //   });
   // }, []);
-
-  const handleCopy = () => {
-    navigator.clipboard.writeText(window.location.href).then(
-      () => {
-        alert('주소가 복사되었습니다.😉😉');
-      },
-      () => {
-        alert('주소 복사에 실패했습니다.🥲🥲');
-      },
-    );
-  };
 
   const handleScroll = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -56,3 +43,15 @@ const Nav = styled.nav<{ isVisible: boolean }>`
   align-items: var(--el-center);
   justify-content: var(--el-center);
 `;
+
+const Button = styled.button`
+  padding: 6px;
+  border-radius: 50%;
+  border: 1px solid #eee;
+  outline: none;
+  box-shadow: none;
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  color: #1a1a1a;
+`.withComponent('a');

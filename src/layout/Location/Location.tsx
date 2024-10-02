@@ -1,27 +1,24 @@
-import styled from '@emotion/styled';
 import data from 'data.json';
 import Address from './Address.tsx';
 import Map from './Map.tsx';
 import MapButtons from './MapButtons.tsx';
-import { Caption } from '@/components/Text.tsx';
+import { Wrap, TitleCont } from '@/components/ContentsWrap';
+import { Title, CustomEn } from '@/components/ContentsFont.tsx';
 
 const Location = () => {
   const { mapInfo } = data;
   return (
-    <LocationWrapper>
-      <>{mapInfo.address1}</>
-      <Caption textAlign={'center'}>{mapInfo.address2}</Caption>
+    <Wrap style={{ background: 'var(--bg-sub)' }}>
+      <CustomEn>Location</CustomEn>
+      <TitleCont>
+        <Title style={{ fontWeight: '600' }}>{mapInfo.address1}</Title>
+        <Title style={{ fontSize: '.85rem' }}>{mapInfo.address2}</Title>
+      </TitleCont>
       <Map />
       <MapButtons />
       <Address />
-    </LocationWrapper>
+    </Wrap>
   );
 };
 
 export default Location;
-
-const LocationWrapper = styled.div`
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-`;

@@ -1,0 +1,38 @@
+.pswp__button.pswp__button--zoom,
+.pswp--has_mouse .pswp__button--arrow {
+  display: none !important;
+}
+
+.swiper-slide {
+  opacity: .2;
+}
+
+.swiper-slide-active {
+  opacity: 1;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  top: unset !important;
+  bottom: 0;
+  color: var(--color-black2) !important;
+  z-index: 99;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 1rem !important;
+}
+
+.swiper-pagination-fraction {
+  position: relative !important;
+  padding-top: calc(var(--el-between) * 4);
+}
+
+.swiper-pagination-fraction>span {
+  font-size: .9375rem;
+}
+
+.pswp__counter {
+  width: auto;
+}

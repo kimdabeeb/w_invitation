@@ -26,6 +26,13 @@ export interface IGreeting {
   eventDetail: string;
 }
 
+export interface BrideAndGroomParents {
+  name: string;
+  relation: string;
+  position: string;
+  parents: Parent;
+}
+
 export interface BrideAndGroom {
   name: string;
   relation: string;
@@ -51,4 +58,10 @@ export interface IMapInfo {
 export interface ILocationInfo {
   title: string;
   desc: string;
+}
+
+declare global {
+  interface Window {
+    Kakao: any;
+  }
 }

@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { Wrap } from '@/components/ContentsWrap';
 import Copy from '@/assets/icons/copy.svg?react';
 import kakaopay from '@/assets/icons/kakaopay.webp?url';
 import toss from '@/assets/icons/toss.webp?url';
@@ -31,68 +32,64 @@ const AccountWrap = ({
   };
 
   return (
-    <Wrapper>
+    <>
       <Info>
         <Relation>{relation}</Relation>
         <Name>{name}</Name>
       </Info>
       <Details>
-        <AccountInfo>
           {bank} {account}
-        </AccountInfo>
-        <CopyButton onClick={handleCopy}>
-          <Copy fill="#dfdfdf" />
-        </CopyButton>
+        <AccountMethod>
+          <CopyButton onClick={handleCopy}>
+            <Copy fill="#dfdfdf" />
+          </CopyButton>
+            {kakaopayAccount && (
+              <AccountButton href={kakaopayAccount} target="_blank" rel="noreferrer">
+                <KakaopayImg src={kakaopay} alt="kakaopay" />
+              </AccountButton>
+            )}
+            {tossAccount && (
+              <AccountButton href={tossAccount} target="_blank" rel="noreferrer">
+                <TossImg src={toss} alt="toss" />
+              </AccountButton>
+            )}
+        </AccountMethod>
       </Details>
-      <AccountLinks>
-        {kakaopayAccount && (
-          <AccountButton href={kakaopayAccount} target="_blank" rel="noreferrer">
-            <KakaopayImg src={kakaopay} alt="kakaopay" />
-          </AccountButton>
-        )}
-        {tossAccount && (
-          <AccountButton href={tossAccount} target="_blank" rel="noreferrer">
-            <TossImg src={toss} alt="toss" />
-          </AccountButton>
-        )}
-      </AccountLinks>
-    </Wrapper>
+    </>
   );
 };
 
-const Wrapper = styled.div`
-  font-family: 'SUITE-Regular';
-  padding: 10px 0;
-  border-bottom: 1px solid #dfdfdf;
-  &:last-of-type {
-    margin-bottom: 0;
-    border-bottom: none;
-  }
-  display: flex;
-  flex-direction: column;
-`;
+export default AccountWrap;
 
 const Info = styled.div`
-  height: inherit;
-  display: flex;
-  align-items: center;
+  display: var(--el-flex);
+  align-items: var(--el-center);
   gap: 5px;
   margin: 5px 0;
 `;
+
 const Relation = styled.span`
-  color: #44484d;
+  font-size: .75rem;
+  color: #444;
 `;
+
 const Name = styled.span`
-  font-size: 1rem
+  font-size: 0.8rem;
+  font-weight: 600;
 `;
 
 const Details = styled.div`
-  display: flex;
-  align-items: center;
+  display: var(--el-flex);
+  align-items: var(--el-center);
   justify-content: space-between;
 `;
 
-const AccountInfo = styled.div``;
+const AccountMethod = styled.div`
+  display: var(--el-flex);
+  align-items: baseline;
+  justify-content: flex-end;
+`;
+
 const CopyButton = styled.button`
   border: none;
   border-radius: 5px;
@@ -104,17 +101,10 @@ const CopyButton = styled.button`
   background: white;
 `;
 
-const AccountLinks = styled.div`
-  display: flex;
-  width: 100%;
-  gap: 2px;
-`;
-
 const AccountButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #dfdfdf;
   border-radius: 5px;
   margin: 5px 0;
   padding: 0 0.8em;
@@ -137,4 +127,4 @@ const TossImg = styled.img`
   width: 70px;
 `;
 
-export default AccountWrap;
+

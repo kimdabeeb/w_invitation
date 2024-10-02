@@ -1,46 +1,64 @@
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
 import { Gallery, Item } from 'react-photoswipe-gallery';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 import 'photoswipe/style.css';
+import { Wrap, TitleCont } from '@/components/ContentsWrap';
+import { CustomEn, Title } from '@/components/ContentsFont';
 import images from '@/layout/Gallery/Images.ts';
+import '@/layout/Gallery/gallery.css';
 
 const PhotoGallery = () => {
   const smallItemStyles: React.CSSProperties = {
     cursor: 'pointer',
     objectFit: 'contain',
-    width: '100px',
-    height: '150px',
+    width: '100%',
+    // height: '150px',
   };
 
   return (
-    <Gallery>
-      <div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(3, 0fr)',
-          gridGap: 2,
-        }}>
-        {images.map((image, index) => {
-          return (
-            <Item
-              key={index}
-              cropped
-              original={image.source}
-              thumbnail={image.source}
-              width={image.width}
-              height={image.height}>
-              {({ ref, open }) => (
-                <img
-                  style={smallItemStyles}
-                  alt={image.alt}
-                  src={image.source}
-                  ref={ref as React.MutableRefObject<HTMLImageElement>}
-                  onClick={open}
-                />
-              )}
-            </Item>
-          );
-        })}
-      </div>
-    </Gallery>
+    <Wrap style={{ paddingLeft: '0', paddingRight: '0' }}>
+      <CustomEn>Gallery</CustomEn>
+      <TitleCont>
+        <Title>사진을 클릭하시면 전체 화면 보기가 가능합니다</Title>
+      </TitleCont>
+      <Wrap style={{ padding: '0' }}>
+        <Gallery>
+          <Swiper
+            modules={[Navigation, Pagination]}
+            style={{ overflow: 'visible' }}
+            slidesPerView={1.2}
+            spaceBetween={10}
+            centeredSlides={true}
+            loop={true}
+            pagination={{
+              type: 'fraction',
+              clickable: true,
+            }}
+            navigation={true}>
+            {images.map((image, index) => {
+              return (
+                <SwiperSlide style={{ width: 'fit-content' }} key={index}>
+                  <Item original={image.source} thumbnail={image.source} width="1920" height="1280">
+                    {({ ref, open }) => (
+                      <img
+                        style={smallItemStyles}
+                        alt={image.alt}
+                        src={image.source}
+                        ref={ref as React.MutableRefObject<HTMLImageElement>}
+                        onClick={open}
+                      />
+                    )}
+                  </Item>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
+        </Gallery>
+      </Wrap>
+    </Wrap>
   );
 };
 
