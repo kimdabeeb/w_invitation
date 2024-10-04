@@ -12,7 +12,7 @@ const Intro = () => {
 
   return (
     <>
-      <Wrap style={{paddingTop: 'calc(var(--el-between) * 3)'}}>
+      <Wrap style={{ padding: 'calc(var(--el-between) * 3) calc(var(--el-between) * 2) 0' }}>
         <MainImg src={mainImg} />
         <Invitation>
           <ul>
@@ -36,8 +36,6 @@ const Intro = () => {
             </p>
           </HostInfo>
         </Invitation>
-      </Wrap>
-      <Wrap style={{padding:'2rem 0'}}>
         <div
           style={{
             width: '100%',
@@ -54,6 +52,7 @@ export default Intro;
 const MainImg = styled.img`
   width: 100%;
   max-width: 450px;
+  aspect-ratio: 1/1.75;
   border-radius: 200px 200px 0 0;
 `;
 
@@ -63,7 +62,7 @@ const Invitation = styled.div`
   align-items: var(--el-center);
   gap: 60px;
   font-size: calc(var(--font-size) - 2);
-  margin-top: 3.125rem;
+  margin-top: calc(var(--el-between) * 6);
   & ul li {
     font-size: calc(var(--font-size) / 1.085);
     letter-spacing: -0.15px;
@@ -84,7 +83,7 @@ const HostInfo = styled.div`
   display: var(--el-flex);
   align-items: var(--el-center);
   justify-content: var(--el-center);
-  gap: 35px;
+  margin-bottom: calc(var(--el-between) * 4);
   & span {
     font-family: var(--font-subTitleEn);
     padding: 0 var(--el-between);

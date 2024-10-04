@@ -12,12 +12,13 @@ const CalendarWrap = () => {
 
   return (
     <Wrap>
-      <CustomEn>WEDDING DAY</CustomEn>
-      <TitleCont>
+      <CustomEn data-aos="fade-up">WEDDING DAY</CustomEn>
+      <TitleCont data-aos="fade-up">
         <Title>{greeting.eventDay}</Title>
         <Title>Saturday, March 1, 2025 | PM 15:40 </Title>
       </TitleCont>
       <Calendar
+        data-aos="fade-up"
         formatDay={(locale = 'ko', date) => moment(date).locale(locale).format('D')}
         selectRange={false}
         calendarType="gregory"

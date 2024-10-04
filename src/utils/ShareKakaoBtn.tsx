@@ -3,33 +3,33 @@ import UpNarrow from '@/assets/icons/upnarrow.png?url';
 import { SubTitle } from '@/components/ContentsFont';
 
 function ShareKakaoBtn() {
-  const shareKakao = () => {
+  const sendUrl = () => {
     if (window.Kakao) {
       const kakao = window.Kakao;
 
       if (!kakao.isInitialized()) {
-        const kakapClientId = import.meta.env.VITE_APP_KAKAO_JAVASCRIPT_KEY;
+        const kakapClientId = import.meta.env.VITE_APP_KAKAOCOPY_CLIENT_ID;
         kakao.init(kakapClientId);
       }
 
       kakao.Share.sendDefault({
         objectType: 'feed',
         content: {
-          title: '라이언이 즐겨먹던 바로 그 틴케이스 치즈볼',
-          description: '바라만 봐도 즐거워지는 힐링 패키지에는 시크릿 스토리가 숨어있어요.',
+          title: 'kakao share btn',
+          description: 'kakao url share button ☺️',
           imageUrl:
             'http://k.kakaocdn.net/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
           link: {
-            mobileWebUrl: 'http://localhost:5173',
-            webUrl: 'http://localhost:5173',
+            mobileWebUrl: 'http://localhost:5173/',
+            webUrl: 'http://localhost:5173/',
           },
         },
         buttons: [
           {
             title: '자세히 보기',
             link: {
-              mobileWebUrl: 'http://localhost:5173',
-              webUrl: 'http://localhost:5173',
+              mobileWebUrl: 'http://localhost:5173/',
+              webUrl: 'http://localhost:5173/',
             },
           },
         ],
@@ -38,7 +38,7 @@ function ShareKakaoBtn() {
   };
 
   return (
-    <KakaoButton onClick={shareKakao}>
+    <KakaoButton onClick={sendUrl}>
       <SubTitle>카카오톡으로 전하기</SubTitle>
       <img src={UpNarrow} />
     </KakaoButton>
@@ -59,7 +59,7 @@ const KakaoButton = styled.button`
   align-items: var(--el-center);
   justify-content: space-between;
   & img {
-    width: 14px;
-    height: 14px;
+    width: calc(var(--el-between) * 2);
+    height: calc(var(--el-between) * 2);
   }
 `;

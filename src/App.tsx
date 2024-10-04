@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { NavermapsProvider } from 'react-naver-maps';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { Container, Wrapper, GalleryWrap } from '@/components/ContentsWrap';
 import Intro from '@/layout/Invitation/Intro';
 import ShareBox from '@/layout/Invitation/ShareBox';
@@ -17,6 +19,13 @@ function App() {
   const galleryRef = useRef(null);
 
   useEffect(() => {
+    AOS.init({
+      offset: 100,
+      delay: 50,
+      duration: 1500,
+      once: false,
+    });
+
     window.addEventListener('scroll', checkScrollPosition);
     return () => {
       window.removeEventListener('scroll', checkScrollPosition);

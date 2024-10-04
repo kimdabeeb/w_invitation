@@ -17,7 +17,7 @@ export const Wrap = styled.section`
   display: var(--el-flex);
   align-items: var(--el-center);
   flex-direction: var(--el-column);
-  padding: calc(var(--el-between) * 8) calc(var(--el-between) * 2.5);
+  padding: calc(var(--el-between) * 8) calc(var(--el-between) * 2.5) calc(var(--el-between) * 4);
   & hr {
     width: 100%;
     border: 0;
@@ -36,6 +36,6 @@ export const GalleryWrap = styled.div`
 `;
 
 export const TitleCont = styled.div`
-  padding: calc(var(--el-between) * 3) 0 calc(var(--el-between) * 4);
+  padding: calc(var(--el-between) * 3) 0 calc(var(--el-between) * 6);
 `;
 

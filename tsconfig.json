@@ -6,6 +6,10 @@
     "module": "ESNext",
     "skipLibCheck": true,
 
+    /* AOS */
+    "typeRoots": ["node_modules/@types"],
+    "types": ["aos"],
+
     "baseUrl": "./src",
     "paths": {
       "@/components/*": ["./components/*"],

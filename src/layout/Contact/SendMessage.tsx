@@ -7,14 +7,11 @@ const SendMessage = () => {
     <Information>
       <CustomEn>INFORMATION</CustomEn>
       <TitleCont>
-        <Title>
-          안내
-          <br />
-          <span>웨딩홀 사전 안내를 드립니다</span>
-        </Title>
+        <Title style={{lineHeight: '2.5', fontWeight:'bold'}}>안내</Title>
+        <Title>웨딩홀 사전 안내를 드립니다</Title>
       </TitleCont>
       <Notice>
-        <Paragraph>환경보호를 위해 화환을 정중히 사양합니다. <br />보내주신 감사한 마음만 받겠습니다. 😊 </Paragraph>
+        <Paragraph>환경보호를 위해 화환을 정중히 사양하고있습니다. <br />보내주신 감사한 마음만 받겠습니다. 😊 </Paragraph>
       </Notice>
     </Information>
   );
@@ -24,7 +21,6 @@ export default SendMessage;
 
 export const Information = styled.div`
   background: var(--bg-body);
-  margin-top: calc(var(--el-between) * 6);
   padding: calc(var(--el-between) * 8) calc(var(--el-between) * 2.5);
 `;
 

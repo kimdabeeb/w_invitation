@@ -10,7 +10,7 @@ const Account = () => {
   return (
     <AccountWrap>
       <TitleCont>
-        <Title>마음 전하실 곳</Title>
+        <Title style={{fontWeight: 'bold'}}>마음 전하실 곳</Title>
         <hr />
         <Title style={{ fontSize: '0.875rem' }}>
           참석이 어려우신 분들을 위해 기재하였습니다 <br />
@@ -45,7 +45,7 @@ export default Account;
 const AccountWrap = styled.div`
   width: 100%;
   background: var(--color-white2);
-  padding: calc(var(--el-between) * 4) calc(var(--el-between) * 2.5);
+  padding: calc(var(--el-between) * 5) calc(var(--el-between) * 2.5);
   hr {
     width: 2.25rem;
     height: 1px;

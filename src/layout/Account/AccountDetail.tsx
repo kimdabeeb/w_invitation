@@ -69,7 +69,7 @@ const Info = styled.div`
 `;
 
 const Relation = styled.span`
-  font-size: .75rem;
+  font-size: .875rem;
   color: #444;
 `;
 
@@ -82,6 +82,8 @@ const Details = styled.div`
   display: var(--el-flex);
   align-items: var(--el-center);
   justify-content: space-between;
+  white-space: nowrap;
+  font-size: 0.875rem;
 `;
 
 const AccountMethod = styled.div`
@@ -109,7 +111,6 @@ const AccountButton = styled.button`
   margin: 5px 0;
   padding: 0 0.8em;
   width: inherit;
-  font-size: 0.7rem;
   cursor: pointer;
   gap: 2px;
   color: #1a1a1a;
