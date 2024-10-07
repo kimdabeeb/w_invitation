@@ -8,12 +8,14 @@ import { Title, CustomEn } from '@/components/ContentsFont.tsx';
 const Location = () => {
   const { mapInfo } = data;
   return (
-    <Wrap style={{ background: 'var(--bg-sub)' }}>
-      <CustomEn>Location</CustomEn>
-      <TitleCont>
-        <Title style={{ fontWeight: '600' }}>{mapInfo.address1}</Title>
-        <Title style={{ fontSize: '.85rem' }}>{mapInfo.address2}</Title>
-      </TitleCont>
+    <Wrap data-aos="fade-up" data-aos-offset="0" style={{ background: 'var(--bg-sub)', marginTop: '3rem' }}>
+      <div data-aos="fade-up" data-aos-delay="200">
+        <CustomEn>Location</CustomEn>
+        <TitleCont>
+          <Title style={{ fontWeight: '600' }}>{mapInfo.address1}</Title>
+          <Title style={{ fontSize: '.85rem' }}>{mapInfo.address2}</Title>
+        </TitleCont>
+      </div>
       <Map />
       <MapButtons />
       <Address />

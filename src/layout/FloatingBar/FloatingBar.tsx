@@ -9,7 +9,7 @@ const FloatingBar = ({ isVisible }: { isVisible: boolean }) => {
   return (
     <Nav isVisible={isVisible}>
       <Button onClick={handleScroll}>
-        <Upward fill="#ddd" />
+        <Upward fill="#808080" />
       </Button>
     </Nav>
   );
@@ -32,7 +32,7 @@ const Nav = styled.nav<{ isVisible: boolean }>`
 const Button = styled.button`
   padding: 6px;
   border-radius: 50%;
-  border: 1px solid #eee;
+  border: 1px solid #808080;
   outline: none;
   box-shadow: none;
   font-size: 0.7rem;

@@ -3,11 +3,10 @@ import Car from '@/assets/icons/car.svg?react';
 import Bus from '@/assets/icons/bus.svg?react';
 import Subway from '@/assets/icons/subway.svg?react';
 import Parking from '@/assets/icons/parking.svg?react';
-import { Wrap } from '@/components/ContentsWrap';
 
 const Address = () => {
   return (
-    <Wrap style={{ padding: 'calc(var(--el-between) * 2.5) calc(var(--el-between) * 2.5' }}>
+    <div data-aos="fade-up">
       <Way>
         <li>
           <p>
@@ -76,7 +75,7 @@ const Address = () => {
           </p>
         </li>
       </Way>
-    </Wrap>
+    </div>
   );
 };
 

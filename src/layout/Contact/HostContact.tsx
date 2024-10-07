@@ -1,13 +1,12 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import data from 'data.json';
-import { Wrap } from '@/components/ContentsWrap';
 import { BrideAndGroomParents } from '@/types/data.ts';
 
 const HostContact = () => {
   const { groom, bride } = data.greeting.host;
   return (
-    <HostCont>
+    <HostCont data-aos="fade">
       <HostInfo person={groom} />
       <HostInfo person={bride} />
     </HostCont>
@@ -18,7 +17,7 @@ export default HostContact;
 
 const HostInfo = ({ person }: { person: BrideAndGroomParents }) => {
   return (
-    <>
+    <div data-aos="fade">
       <HostDetails>
         {person.parents && (
           <>
@@ -39,7 +38,7 @@ const HostInfo = ({ person }: { person: BrideAndGroomParents }) => {
         <p>{person.position}</p>
         <p>{person.name}</p>
       </HighlightedName>
-    </>
+    </div>
   );
 };
 

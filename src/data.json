@@ -50,13 +50,13 @@
           "name": "성정옥",
           "relation": "신랑 어머니",
           "bank": "농협",
-          "account": "123-45-678901"
+          "account": "12345678901"
         },
         {
           "name": "최영준",
           "relation": "신랑",
           "bank": "신한",
-          "account": "1234-56-789012",
+          "account": "12345678901",
           "kakaopayAccount": "",
           "tossAccount": ""
         }
@@ -69,13 +69,13 @@
           "name": "김용대",
           "relation": "신부 아버지",
           "bank": "국민",
-          "account": "123-45-678901"
+          "account": "12345678901"
         },
         {
           "name": "이   선",
           "relation": "신부 어머니",
           "bank": "신한",
-          "account": "123-45-678901"
+          "account": "12345678901"
         },
         {
           "name": "김다빈",

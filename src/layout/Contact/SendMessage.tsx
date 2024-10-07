@@ -4,14 +4,19 @@ import { CustomEn, Title, Paragraph } from '@/components/ContentsFont';
 
 const SendMessage = () => {
   return (
-    <Information>
-      <CustomEn>INFORMATION</CustomEn>
-      <TitleCont>
-        <Title style={{lineHeight: '2.5', fontWeight:'bold'}}>안내</Title>
-        <Title>웨딩홀 사전 안내를 드립니다</Title>
-      </TitleCont>
-      <Notice>
-        <Paragraph>환경보호를 위해 화환을 정중히 사양하고있습니다. <br />보내주신 감사한 마음만 받겠습니다. 😊 </Paragraph>
+    <Information data-aos="fade">
+      <div data-aos="fade-up">
+        <CustomEn>INFORMATION</CustomEn>
+        <TitleCont>
+          <Title style={{ lineHeight: '2.5', fontWeight: 'bold' }}>안내</Title>
+          <Title>웨딩홀 사전 안내를 드립니다</Title>
+        </TitleCont>
+      </div>
+      <Notice data-aos="fade-up">
+        <Paragraph>
+          환경보호를 위해 화환을 정중히 사양하고있습니다. <br />
+          보내주신 감사한 마음만 받겠습니다. 😊
+        </Paragraph>
       </Notice>
     </Information>
   );
@@ -20,6 +25,7 @@ const SendMessage = () => {
 export default SendMessage;
 
 export const Information = styled.div`
+  height: 100%;
   background: var(--bg-body);
   padding: calc(var(--el-between) * 8) calc(var(--el-between) * 2.5);
 `;

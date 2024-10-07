@@ -20,10 +20,10 @@ function App() {
 
   useEffect(() => {
     AOS.init({
-      offset: 100,
-      delay: 50,
-      duration: 1500,
-      once: false,
+      offset: 50,
+      duration: 1000,
+      easing: 'ease-in-sine',
+      once: true,
     });
 
     window.addEventListener('scroll', checkScrollPosition);
@@ -50,7 +50,7 @@ function App() {
       <Container>
         <Wrapper>
           <Intro />
-          <CalendarWrap />
+          <CalendarWrap/>
           <HostContact />
           <GalleryWrap ref={galleryRef}>
             <PhotoGallery />

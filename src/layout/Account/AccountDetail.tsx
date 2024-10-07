@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import { Wrap } from '@/components/ContentsWrap';
 import Copy from '@/assets/icons/copy.svg?react';
 import kakaopay from '@/assets/icons/kakaopay.webp?url';
 import toss from '@/assets/icons/toss.webp?url';
@@ -38,21 +37,21 @@ const AccountWrap = ({
         <Name>{name}</Name>
       </Info>
       <Details>
-          {bank} {account}
+        {bank} {account}
         <AccountMethod>
+          {kakaopayAccount && (
+            <AccountButton href={kakaopayAccount} target="_blank" rel="noreferrer">
+              <KakaopayImg src={kakaopay} alt="kakaopay" />
+            </AccountButton>
+          )}
+          {tossAccount && (
+            <AccountButton href={tossAccount} target="_blank" rel="noreferrer">
+              <TossImg src={toss} alt="toss" />
+            </AccountButton>
+          )}
           <CopyButton onClick={handleCopy}>
             <Copy fill="#dfdfdf" />
           </CopyButton>
-            {kakaopayAccount && (
-              <AccountButton href={kakaopayAccount} target="_blank" rel="noreferrer">
-                <KakaopayImg src={kakaopay} alt="kakaopay" />
-              </AccountButton>
-            )}
-            {tossAccount && (
-              <AccountButton href={tossAccount} target="_blank" rel="noreferrer">
-                <TossImg src={toss} alt="toss" />
-              </AccountButton>
-            )}
         </AccountMethod>
       </Details>
     </>
@@ -74,7 +73,7 @@ const Relation = styled.span`
 `;
 
 const Name = styled.span`
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   font-weight: 600;
 `;
 

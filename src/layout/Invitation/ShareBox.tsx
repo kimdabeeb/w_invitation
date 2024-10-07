@@ -17,9 +17,11 @@ const ShareBox = () => {
   return (
     <>
       <div
+        data-aos="fade"
+        data-aos-delay="400"
         style={{
           width: '100%',
-          aspectRatio: '1/1.5',
+          aspectRatio: '1/1.75',
           background: '#afc8d4',
         }}></div>
       <SnsCont>
@@ -37,7 +39,7 @@ const ShareBox = () => {
 export default ShareBox;
 
 const SnsCont = styled.div`
-  padding: calc(var(--el-between) * 4) calc(var(--el-between) * 5) var(--el-between);
+  padding: calc(var(--el-between) * 4) calc(var(--el-between) * 3) var(--el-between);
   display: var(--el-flex);
   flex-direction: var(--el-column);
   align-items: var(--el-center);

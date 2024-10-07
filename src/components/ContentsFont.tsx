@@ -18,6 +18,5 @@ export const CustomEn = styled.p`
   font-size: calc(var(--font-size) * 2.375);
   color: var(--color-black2);
   letter-spacing: 1.5px;
-  opacity: 0.9;
 `;
 

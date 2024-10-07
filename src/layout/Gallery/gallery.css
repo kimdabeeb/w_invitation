@@ -40,3 +40,8 @@
 .pswp__counter {
   width: auto;
 }
+
+.pswp--click-to-zoom.pswp--zoom-allowed .pswp__img {
+  height: auto!important;
+  top: -165px!important;
+}
