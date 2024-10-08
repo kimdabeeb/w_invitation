@@ -15,7 +15,7 @@ const SendMessage = () => {
       <Notice data-aos="fade-up">
         <Paragraph>
           환경보호를 위해 화환을 정중히 사양하고있습니다. <br />
-          보내주신 감사한 마음만 받겠습니다. 😊
+          보내주신 마음 감사히 받겠습니다. 😊
         </Paragraph>
       </Notice>
     </Information>
