@@ -6,11 +6,11 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 // https://vitejs.dev/config/
 export default defineConfig({
   base: '/w_invitation/',
-  resolve: {
-    alias: [
-      { find: '@', replacement: '/src'}
-    ]
-  },
+  // resolve: {
+  //   alias: [
+  //     { find: '@', replacement: '/src'}
+  //   ]
+  // },
   plugins: [react(), tsconfigPaths(), svgr()],
   build: {
     rollupOptions: {
