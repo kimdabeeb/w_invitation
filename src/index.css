@@ -90,7 +90,7 @@ body {
   background: var(--color-white);
 }
 
-.root {
+#root {
   background: var(--bg-sub2);
 }
 

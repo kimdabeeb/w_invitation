@@ -10,15 +10,15 @@
     "typeRoots": ["node_modules/@types"],
     "types": ["aos"],
 
-    "baseUrl": "./src",
+    "baseUrl": "./",
     "paths": {
-      "@/components/*": ["./components/*"],
-      "@/layout/*": ["./layout/*"],
-      "@/assets/*": ["./assets/*"],
-      "@/styles/*": ["./styles/*"],
-      "@/hooks/*": ["./hooks/*"],
-      "@/utils/*": ["./utils/*"],
-      "@/types/*": ["./types/*"]
+      "@/components/*": ["./src/components/*"],
+      "@/layout/*": ["./src/layout/*"],
+      "@/assets/*": ["./src/assets/*"],
+      "@/styles/*": ["./src/styles/*"],
+      "@/hooks/*": ["./src/hooks/*"],
+      "@/utils/*": ["./src/utils/*"],
+      "@/types/*": ["./src/types/*"]
     },
 
     /* Bundler mode */
