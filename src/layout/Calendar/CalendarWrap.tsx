@@ -1,6 +1,6 @@
 import Calendar from 'react-calendar';
 import moment from 'moment';
-import data from 'data.json';
+import data from '../../data.json';
 import { Wrap, TitleCont } from '@/components/ContentsWrap';
 import { CustomEn, Title } from '@/components/ContentsFont';
 import 'react-calendar/dist/Calendar.css';

@@ -1,7 +1,7 @@
 import mainImg from '@/assets/images/img_3.webp?url';
 import styled from '@emotion/styled';
 import { Wrap } from '@/components/ContentsWrap';
-import data from 'data.json';
+import data from '../../data.json';
 import { BrideAndGroom } from '@/types/data.ts';
 
 const Intro = () => {

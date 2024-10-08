@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import data from 'data.json';
+import data from '../../data.json';
 import NaverMap from '@/assets/icons/naver_map.png?url';
 import KakaoMap from '@/assets/icons/kakao_map.png?url';
 
