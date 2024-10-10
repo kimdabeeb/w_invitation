@@ -23,7 +23,7 @@ function App() {
       offset: 50,
       duration: 1300,
       easing: 'ease-in-quad',
-      once: false,
+      once: true,
     });
 
     window.addEventListener('scroll', checkScrollPosition);

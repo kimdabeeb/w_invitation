@@ -42,9 +42,9 @@ const CalendarWrap = () => {
         .highlight {
           background: #afc8d4;
           border-radius: 50%;
-          max-width: 43px!important;
+          max-width: 38px!important;
           position: relative;
-          left: 3px;
+          left: 6px;
         }
       }
       

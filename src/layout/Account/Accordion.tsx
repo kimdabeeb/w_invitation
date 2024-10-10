@@ -14,7 +14,7 @@ const Accordion = ({ title, children }: IAccordionProps) => {
   };
 
   return (
-    <AccordionCont data-aos="fade">
+    <AccordionCont data-aos="fade-up" data-aos-delay="250">
       <AccordionTitle isActive={isOpen} onClick={toggleAccordion}>
         <p>{title}에게</p>
         <span>
@@ -58,7 +58,7 @@ const AccordionTitle = styled.div<{ isActive: boolean }>`
 const AccordionBox = styled.div`
   font-size: 0.8125rem;
   text-align: justify;
-  padding: var(--el-between) calc(var(--el-between) * 2.5) calc(var(--el-between) * 2.5);
+  padding: calc(var(--el-between) * 2.5);
   background-color: var(--color-white);
   border-radius: 0 0 var(--el-between) var(--el-between);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;

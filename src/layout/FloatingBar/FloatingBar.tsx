@@ -20,13 +20,9 @@ export default FloatingBar;
 const Nav = styled.nav<{ isVisible: boolean }>`
   min-width: 65px;
   position: fixed;
-  bottom: 30px;
-  right: 0;
-  gap: 5px;
+  bottom: 15px;
+  right: 5px;
   display: ${(props) => (props.isVisible ? 'flex' : 'none')};
-  flex-direction: var(--el-center);
-  align-items: var(--el-center);
-  justify-content: var(--el-center);
 `;
 
 const Button = styled.button`

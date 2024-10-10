@@ -19,7 +19,7 @@ const Account = () => {
       </TitleCont>
       {hostInfo.map((host) => {
         return (
-          <Accordion data-aos="fade-up" title={host.host} key={host.host}>
+          <Accordion data-aos="fade-up" data-aos-delay="200"  title={host.host} key={host.host}>
             {host.accountInfo.map((account) => {
               return (
                 <AccountDetail
