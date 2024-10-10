@@ -28,6 +28,7 @@ const Nav = styled.nav<{ isVisible: boolean }>`
 const Button = styled.button`
   padding: 6px;
   border-radius: 50%;
+  border: 1px solid #808080;
   background: #fff;
   outline: none;
   box-shadow: none;

@@ -108,7 +108,7 @@ const AccountButton = styled.button`
   border-radius: 5px;
   margin: 5px 0;
   padding: 0 0.8em;
-  width: inherit;
+  width: auto;
   cursor: pointer;
   gap: 2px;
   color: #1a1a1a;

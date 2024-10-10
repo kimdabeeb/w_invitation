@@ -37,9 +37,9 @@ const AccordionTitle = styled.div<{ isActive: boolean }>`
   display: var(--el-flex);
   align-items: var(--el-center);
   justify-content: space-between;
-  padding: var(--el-between) calc(var(--el-between) * 2);
+  padding: calc(var(--el-between) * 1.5) calc(var(--el-between) * 2);
   background-color: var(--color-white);
-  border-radius:var(--el-between);
+  border-radius: var(--el-between);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
   transition: all 0.3s ease-in-out;
   font-size: var(--font-size);
@@ -47,7 +47,9 @@ const AccordionTitle = styled.div<{ isActive: boolean }>`
   & > p {
     color: #4c4c4c;
   }
-  & svg {
+  & span {
+    align-self: baseline;
+    display: contents;
     cursor: pointer;
     user-select: none;
     transition: all 0.3s ease-in-out;

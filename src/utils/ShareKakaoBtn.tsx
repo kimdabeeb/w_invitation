@@ -20,16 +20,16 @@ function ShareKakaoBtn() {
           imageUrl:
             'http://k.kakaocdn.net/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
           link: {
-            mobileWebUrl: 'http://localhost:5173/',
-            webUrl: 'http://localhost:5173/',
+            mobileWebUrl: 'https://w-invitation-yjdb.vercel.app/',
+            webUrl: 'https://w-invitation-yjdb.vercel.app/',
           },
         },
         buttons: [
           {
             title: '자세히 보기',
             link: {
-              mobileWebUrl: 'http://localhost:5173/',
-              webUrl: 'http://localhost:5173/',
+              mobileWebUrl: 'https://w-invitation-yjdb.vercel.app/',
+              webUrl: 'https://w-invitation-yjdb.vercel.app/',
             },
           },
         ],
