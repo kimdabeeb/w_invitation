@@ -36,7 +36,7 @@ const CalendarWrap = () => {
         />
       </div>
       <style>{`
-      .react-calendar * {font-family: GowunBatang; text-decoration: unset!important; cursor: none; }
+      .react-calendar * {font-family: GowunBatang; text-decoration: unset!important; cursor: none;}
       .react-calendar { border: none; color:#171717!important;
         .highlight {
           background: #afc8d4;
@@ -50,6 +50,7 @@ const CalendarWrap = () => {
       .react-calendar__navigation__label__labelText { font-size: 1.125rem; }
       .react-calendar__title { font-size: .95rem; padding-top: 12px; padding-bottom:12px; color:#171717!important; }
       .react-calendar > button:hover,  .react-calendar > button.active { cursor: none; background: unset; }
+      .react-calendar__tile.react-calendar__month-view__days__day {color:#171717!important;}
       .react-calendar__month-view__days__day--weekend { color: #d10000;}
       .react-calendar__month-view__days__day--weekend.highlight { color: #fff!important; font-weight: bold; }
       .react-calendar__navigation__label { background: #fff; }
