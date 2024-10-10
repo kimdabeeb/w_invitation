@@ -18,32 +18,32 @@ const Intro = () => {
         <MainImg src={mainImg} />
         <Invitation data-aos="fade">
           <ul>
-            <li data-aos="fade-right" data-aos-delay="100">
+            <li data-aos="fade" data-aos-delay="100">
               우리가 사랑함은 그가 먼저 우리를 사랑하셨음이라
               <br />
-              <span data-aos="fade-right" data-aos-delay="200">
+              <span data-aos="fade" data-aos-delay="150">
                 요한일서 4:19
               </span>
             </li>
-            <li data-aos="fade-right" data-aos-delay="800">
+            <li data-aos="fade" data-aos-delay="400">
               하나님의 떄에 서로 만난 두 사람이
             </li>
-            <li data-aos="fade-right" data-aos-delay="1200">
+            <li data-aos="fade" data-aos-delay="800">
               은혜로 결실을 맺게 되었습니다.
             </li>
-            <li data-aos="fade-right" data-aos-delay="1600">
+            <li data-aos="fade" data-aos-delay="1200">
               둘이 하나가 되어 평생 서로를 돕는 배필로
             </li>
-            <li data-aos="fade-right" data-aos-delay="2000">
+            <li data-aos="fade" data-aos-delay="1600">
               서약하는 자리에 기도와 축복으로 함께 해주신다면
             </li>
-            <li data-aos="fade-right" data-aos-delay="2400">
+            <li data-aos="fade" data-aos-delay="2000">
               더 없는 감사와 기쁨으로간직하겠습니다.
             </li>
           </ul>
           <HostInfo
             data-aos="fade"
-            data-aos-delay="2700"
+            data-aos-delay="2100"
             // data-aos-offset="700"
           >
             <p>

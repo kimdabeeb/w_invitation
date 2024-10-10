@@ -21,8 +21,8 @@ function App() {
   useEffect(() => {
     AOS.init({
       offset: 50,
-      duration: 1500,
-      easing: 'ease-in-sine',
+      duration: 1300,
+      easing: 'ease-in-quad',
       once: false,
     });
 

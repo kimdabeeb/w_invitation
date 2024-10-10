@@ -24,7 +24,8 @@ export const Wrap = styled.section`
     width: 100%;
     border: 0;
     border-top: 1px solid var(--color-point);
-    margin-top: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
   }
 `;
 

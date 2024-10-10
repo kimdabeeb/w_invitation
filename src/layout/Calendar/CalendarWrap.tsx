@@ -36,32 +36,26 @@ const CalendarWrap = () => {
         />
       </div>
       <style>{`
-      .react-calendar * {
-        text-decoration: unset!important;
-      }
+      .react-calendar * {text-decoration: unset!important; cursor: none;}
       .react-calendar {
-        font-family: GowunBatang;
-        border: none;
-      .highlight {
-        background: #afc8d4;
-        color: #fff;
-        font-weight: bold;
-        border-radius: 50%;
-        max-width: 43px!important;
-        position: relative;
-        left: 0;
+        font-family: GowunBatang; border: none;
+        .highlight {
+          background: #afc8d4;
+          border-radius: 50%;
+          max-width: 43px!important;
+          position: relative;
+          left: 3px;
+        }
       }
       
       .react-calendar__navigation__label__labelText { font-size: 1.125rem; }
-      .react-calendar__tile { font-size: .95em; padding-top: 12px; padding-bottom:12px; }
-      .react-calendar__tile--active,
-      .react-calendar__navigation__label {
-        background: #fff;
-        font-family: GowunBatang;
-        color:#000;
-      }
+      .react-calendar__title { font-size: .95rem; padding-top: 12px; padding-bottom:12px; color:#171717; }
+      .react-calendar button:hover { background: unset; }
+      .react-calendar__month-view__days__day--weekend { color: #d10000;}
+      .react-calendar__month-view__days__day--weekend.highlight { color: #fff; font-weight: bold; }
+
+      .react-calendar__navigation__label { background: #fff; }
       .react-calendar__month-view__weekdays {margin-bottom:.6rem;}
-      .react-calendar__month-view__days__day--neighboringMonth {color: #5F5F5F;}
       .react-calendar__navigation {
         display: flex;
         text-align: center;
@@ -81,11 +75,11 @@ const CalendarWrap = () => {
             background-color: #fff;
           }
       }
+      .react-calendar__tile--active,
       .react-calendar__tile--active:enabled:hover,
+      .react-calendar__navigation button:disabled,
       .react-calendar__navigation button:enabled:hover, 
-      .react-calendar__navigation button:enabled:focus {
-        background-color: unset;
-      }
+      .react-calendar__navigation button:enabled:focus { background-color: unset!important; background: unset!important; color: #171717; cursor: none; }
     }
     `}</style>
     </Wrap>

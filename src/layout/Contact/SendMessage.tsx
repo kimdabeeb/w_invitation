@@ -4,7 +4,7 @@ import { CustomEn, Title, Paragraph } from '@/components/ContentsFont';
 
 const SendMessage = () => {
   return (
-    <Information data-aos="fade" data-aos-offset="100">
+    <Information data-aos="fade" data-aos-offset="100" data-aos-anchor="center-top">
       <div data-aos="fade">
         <CustomEn>INFORMATION</CustomEn>
         <TitleCont>
@@ -12,7 +12,7 @@ const SendMessage = () => {
           <Title>웨딩홀 사전 안내를 드립니다</Title>
         </TitleCont>
       </div>
-      <Notice data-aos="fade-up">
+      <Notice data-aos="fade-up" data-aos-delay="20">
         <Paragraph>
           환경보호를 위해 화환을 정중히 사양하고있습니다. <br />
           보내주신 마음 감사히 받겠습니다. 😊

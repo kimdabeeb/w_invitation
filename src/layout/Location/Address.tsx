@@ -98,7 +98,7 @@ const Way = styled.ul`
     opacity: 0.9;
     p:first-of-type {
       font-weight: bold;
-      padding: var(--el-between) 0;
+      padding: var(--el-between) 0 calc(var(--el-between) * 1.5);
       display: var(--el-flex);
       align-items: var(--el-center);
     }

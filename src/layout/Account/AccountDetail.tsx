@@ -50,7 +50,7 @@ const AccountWrap = ({
             </AccountButton>
           )}
           <CopyButton onClick={handleCopy}>
-            <Copy fill="#dfdfdf" />
+            <Copy fill="#a5a5a5" />
           </CopyButton>
         </AccountMethod>
       </Details>
@@ -63,8 +63,8 @@ export default AccountWrap;
 const Info = styled.div`
   display: var(--el-flex);
   align-items: var(--el-center);
-  gap: 5px;
-  margin: 5px 0;
+  gap: 8px;
+  line-height: 1.4;
 `;
 
 const Relation = styled.span`

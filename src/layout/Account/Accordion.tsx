@@ -18,7 +18,7 @@ const Accordion = ({ title, children }: IAccordionProps) => {
       <AccordionTitle isActive={isOpen} onClick={toggleAccordion}>
         <p>{title}에게</p>
         <span>
-          <ExpandMore fill="#ddd" />
+          <ExpandMore fill="#a5a5a5" />
         </span>
       </AccordionTitle>
       {isOpen && <AccordionBox>{children}</AccordionBox>}
@@ -45,7 +45,7 @@ const AccordionTitle = styled.div<{ isActive: boolean }>`
   font-size: 0.8125rem;
   cursor: pointer;
   & > p {
-    color: #a6a6a6;
+    color: #4c4c4c;
   }
   & svg {
     cursor: pointer;
@@ -65,5 +65,7 @@ const AccordionBox = styled.div`
   > div:nth-of-type(2),
   div:nth-of-type(4) {
     border-bottom: 1px solid #ddd;
+    padding-bottom: 8px;
+    margin-bottom: 14px;
   }
 `;
