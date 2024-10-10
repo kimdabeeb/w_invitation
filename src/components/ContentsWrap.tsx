@@ -6,6 +6,8 @@ export const Container = styled.div`
 
 export const Wrapper = styled.div`
   max-width: 28.125rem;
+  width: 100%;
+  overflow: hidden;
   display: var(--el-flex);
   align-items: var(--el-center);
   flex-direction: var(--el-column);
