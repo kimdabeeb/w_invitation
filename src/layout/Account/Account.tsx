@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import data from '../../data.json';
 import AccountDetail from './AccountDetail.tsx';
-import Accordion from '@/layout/Account/Accordion.tsx';
+import Accordion from './Accordion.tsx';
 import { TitleCont } from '@/components/ContentsWrap';
 import { Title } from '@/components/ContentsFont.tsx';
 
