@@ -64,7 +64,6 @@ const Info = styled.div`
   display: var(--el-flex);
   align-items: var(--el-center);
   gap: 8px;
-  line-height: 1.4;
 `;
 
 const Relation = styled.span`

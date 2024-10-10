@@ -39,7 +39,7 @@ const AccordionTitle = styled.div<{ isActive: boolean }>`
   justify-content: space-between;
   padding: var(--el-between) calc(var(--el-between) * 2);
   background-color: var(--color-white);
-  border-radius: var(--el-between);
+  border-radius:var(--el-between);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
   transition: all 0.3s ease-in-out;
   font-size: var(--font-size);
@@ -62,6 +62,8 @@ const AccordionBox = styled.div`
   background-color: var(--color-white);
   border-radius: 0 0 var(--el-between) var(--el-between);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  position: relative;
+  top: -5px;
   > div:nth-of-type(2),
   div:nth-of-type(4) {
     border-bottom: 1px solid #ddd;

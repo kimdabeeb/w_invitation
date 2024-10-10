@@ -47,7 +47,7 @@ const HostCont = styled.div`
   display: var(--el-flex);
   flex-direction: var(--el-column);
   gap: 25px;
-  padding: calc(var(--el-between) * 7)  calc(var(--el-between) * 4.5);
+  padding: calc(var(--el-between) * 6) calc(var(--el-between) * 4.5);
   background: var(--bg-sub);
   font-family: var(--font-title);
   > div:nth-of-type(2) {
@@ -60,7 +60,7 @@ const HostCont = styled.div`
     font-weight: 400;
   }
 
-  > span:nth-of-type(1) > p:last-child::before {
+  > div:nth-of-type(1) > span:nth-of-type(1) > p:last-child::before {
     content: 'groom';
     font-size: 0.75rem;
     font-weight: 400;
@@ -69,7 +69,7 @@ const HostCont = styled.div`
     right: 35px;
   }
 
-  > span:nth-of-type(2) > p:last-child::before {
+  > div:nth-of-type(2) > span:nth-of-type(1) > p:last-child::before {
     content: 'bride';
     font-size: 0.75rem;
     font-weight: 400;
