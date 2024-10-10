@@ -7,7 +7,7 @@ const MapButtons = () => {
   const { naverMap, kakaoMap } = data.mapInfo;
 
   return (
-    <MapButton  data-aos="fade-up">
+    <MapButton  data-aos="fade">
       <Button onClick={() => window.open(naverMap)}><img src={NaverMap} />네이버 지도</Button>
       <Button onClick={() => window.open(kakaoMap)}><img src={KakaoMap} />카카오맵</Button>
     </MapButton>

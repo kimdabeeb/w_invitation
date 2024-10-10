@@ -7,7 +7,7 @@ const Map = () => {
 
   return (
     <MapDiv
-      data-aos="fade-up"
+      data-aos="fade"
       style={{
         width: '100%',
         height: '300px',

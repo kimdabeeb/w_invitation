@@ -21,9 +21,9 @@ function App() {
   useEffect(() => {
     AOS.init({
       offset: 50,
-      duration: 1200,
+      duration: 1500,
       easing: 'ease-in-sine',
-      once: true,
+      once: false,
     });
 
     window.addEventListener('scroll', checkScrollPosition);

@@ -4,8 +4,8 @@ import { CustomEn, Title, Paragraph } from '@/components/ContentsFont';
 
 const SendMessage = () => {
   return (
-    <Information data-aos="fade">
-      <div data-aos="fade-up">
+    <Information data-aos="fade" data-aos-offset="100">
+      <div data-aos="fade">
         <CustomEn>INFORMATION</CustomEn>
         <TitleCont>
           <Title style={{ lineHeight: '2.5', fontWeight: 'bold' }}>안내</Title>

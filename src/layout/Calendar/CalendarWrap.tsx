@@ -11,14 +11,14 @@ const CalendarWrap = () => {
   const markedDate = moment(marks[0], 'DD-MM-YYYY').toDate();
 
   return (
-    <Wrap data-aos="fade-up" data-aos-delay="150" style={{ marginBottom: '3rem' }}>
+    <Wrap data-aos="fade" data-aos-delay="150" style={{ marginBottom: '3rem' }}>
       <CustomEn>WEDDING DAY</CustomEn>
       <TitleCont>
         <Title>{greeting.eventDay}</Title>
         <Title>Saturday, March 1, 2025 | PM 15:40 </Title>
       </TitleCont>
       <hr style={{ borderTop: '1px solid #e5e7eb', margin: '0 auto 2rem' }} />
-      <div data-aos="fade-up" data-aos-delay="300">
+      <div data-aos="fade" data-aos-delay="300">
         <Calendar
           formatDay={(locale = 'ko', date) => moment(date).locale(locale).format('D')}
           selectRange={false}

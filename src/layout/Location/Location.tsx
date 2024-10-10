@@ -9,10 +9,9 @@ const Location = () => {
   const { mapInfo } = data;
   return (
     <Wrap
-      data-aos="fade-up"
-      data-aos-offset="0"
+      data-aos="fade"
       style={{ background: 'var(--bg-sub)', marginTop: '3rem' }}>
-      <div data-aos="fade-up" data-aos-delay="200">
+      <div data-aos="fade" data-aos-delay="200">
         <CustomEn>Location</CustomEn>
         <TitleCont>
           <Title style={{ fontWeight: '600' }}>{mapInfo.address1}</Title>

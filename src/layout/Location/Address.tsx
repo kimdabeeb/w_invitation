@@ -6,7 +6,7 @@ import Parking from '@/assets/icons/parking.svg?react';
 
 const Address = () => {
   return (
-    <div data-aos="fade-up">
+    <div data-aos="fade">
       <Way>
         <li>
           <p>
