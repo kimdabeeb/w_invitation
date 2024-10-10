@@ -19,7 +19,7 @@ export default MapButtons;
 const MapButton = styled.div`
   display: var(--el-flex);
   justify-content: var(--el-center);
-  margin: var(--el-between);
+  margin: calc(var(--el-between) * 1.5);
   gap: var(--el-between);
 `;
 

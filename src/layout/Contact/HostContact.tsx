@@ -47,7 +47,7 @@ const HostCont = styled.div`
   display: var(--el-flex);
   flex-direction: var(--el-column);
   gap: 25px;
-  padding: calc(var(--el-between) * 6) calc(var(--el-between) * 4.5);
+  padding: calc(var(--el-between) * 6.5) calc(var(--el-between) * 5.5);
   background: var(--bg-sub);
   font-family: var(--font-title);
   > div:nth-of-type(2) {
