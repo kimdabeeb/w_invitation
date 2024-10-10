@@ -26,7 +26,7 @@ const Intro = () => {
               </span>
             </li>
             <li data-aos="fade" data-aos-delay="400">
-              하나님의 떄에 서로 만난 두 사람이
+              하나님의 때에 서로 만난 두 사람이
             </li>
             <li data-aos="fade" data-aos-delay="800">
               은혜로 결실을 맺게 되었습니다.
@@ -38,7 +38,7 @@ const Intro = () => {
               서약하는 자리에 기도와 축복으로 함께 해주신다면
             </li>
             <li data-aos="fade" data-aos-delay="2000">
-              더 없는 감사와 기쁨으로간직하겠습니다.
+              더 없는 감사와 기쁨으로 간직하겠습니다.
             </li>
           </ul>
           <HostInfo

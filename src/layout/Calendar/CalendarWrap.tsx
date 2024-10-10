@@ -11,7 +11,7 @@ const CalendarWrap = () => {
   const markedDate = moment(marks[0], 'DD-MM-YYYY').toDate();
 
   return (
-    <Wrap data-aos="fade" data-aos-delay="150" style={{ marginBottom: '3rem' }}>
+    <Wrap data-aos="fade" data-aos-delay="150" style={{ marginBottom: '2rem' }}>
       <CustomEn>WEDDING DAY</CustomEn>
       <TitleCont>
         <Title>{greeting.eventDay}</Title>
@@ -36,9 +36,8 @@ const CalendarWrap = () => {
         />
       </div>
       <style>{`
-      .react-calendar * {text-decoration: unset!important; cursor: none;}
-      .react-calendar {
-        font-family: GowunBatang; border: none;
+      .react-calendar * {font-family: GowunBatang; text-decoration: unset!important; cursor: none; }
+      .react-calendar { border: none; color:#171717;
         .highlight {
           background: #afc8d4;
           border-radius: 50%;
@@ -50,10 +49,10 @@ const CalendarWrap = () => {
       
       .react-calendar__navigation__label__labelText { font-size: 1.125rem; }
       .react-calendar__title { font-size: .95rem; padding-top: 12px; padding-bottom:12px; color:#171717; }
-      .react-calendar button:hover { background: unset; }
+      .react-calendar > button:hover,  .react-calendar > button.active { cursor: none; background: unset; }
       .react-calendar__month-view__days__day--weekend { color: #d10000;}
-      .react-calendar__month-view__days__day--weekend.highlight { color: #fff; font-weight: bold; }
-
+      .react-calendar__month-view__days__day--weekend.highlight { color: #fff!important; font-weight: bold; }
+      [data-aos].aos-animate {pointer-event: none!important;}
       .react-calendar__navigation__label { background: #fff; }
       .react-calendar__month-view__weekdays {margin-bottom:.6rem;}
       .react-calendar__navigation {

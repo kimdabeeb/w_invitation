@@ -58,6 +58,7 @@ const CopyButton = styled.button`
   outline: none;
   border-radius: var(--el-between);
   font-size: 0.875rem;
+  color: var(--color-black);
   padding: calc(var(--el-between) * 1.8) calc(var(--el-between) * 2.5);
   display: var(--el-flex);
   align-items: var(--el-center);

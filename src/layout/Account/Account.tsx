@@ -10,9 +10,9 @@ const Account = () => {
   return (
     <AccountWrap data-aos="fade">
       <TitleCont>
-        <Title data-aos="fade-up" style={{ fontWeight: 'bold' }}>마음 전하실 곳</Title>
+        <Title data-aos="fade-up" style={{ fontSize: '1.125rem', fontWeight: 'bold' }}>마음 전하실 곳</Title>
         <hr data-aos="fade-up" />
-        <Title data-aos="fade-up" style={{ fontSize: '0.875rem' }}>
+        <Title data-aos="fade-up" style={{ fontSize: '0.9rem' }}>
           참석이 어려우신 분들을 위해 기재하였습니다 <br />
           너그러운 마음으로 양해부탁드립니다
         </Title>
@@ -45,7 +45,7 @@ export default Account;
 const AccountWrap = styled.div`
   width: 100%;
   background: var(--color-white2);
-  padding: calc(var(--el-between) * 5) calc(var(--el-between) * 2.5);
+  padding: calc(var(--el-between) * 7) calc(var(--el-between) * 2.5);
   hr {
     width: 2.25rem;
     height: 1px;

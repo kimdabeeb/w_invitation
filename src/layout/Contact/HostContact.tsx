@@ -47,7 +47,7 @@ const HostCont = styled.div`
   display: var(--el-flex);
   flex-direction: var(--el-column);
   gap: 25px;
-  padding: calc(var(--el-between) * 4.5);
+  padding: calc(var(--el-between) * 7)  calc(var(--el-between) * 4.5);
   background: var(--bg-sub);
   font-family: var(--font-title);
   > div:nth-of-type(2) {
@@ -80,20 +80,19 @@ const HostCont = styled.div`
 `;
 
 const HostDetails = styled.div`
+  font-size: 1rem;
   display: var(--el-flex);
   align-items: var(--el-center);
   justify-content: space-between;
-  gap: 6px;
-  /* padding: 0 calc(var(--el-between) * 7); */
   font-weight: bold;
-  /* text-align: var(--el-center); */
   white-space: nowrap;
+  margin-bottom: calc(var(--el-between) * 1.5);
 `;
 
 const RelationText = styled.div`
   display: var(--el-flex);
   align-items: var(--el-center);
-  gap: 6px;
+  justify-content: space-between;
   margin: 0;
   line-height: 2;
   width: 50px;
@@ -104,7 +103,7 @@ const HighlightedName = styled.span`
   display: var(--el-flex);
   justify-content: space-between;
   & p {
-    font-size: 0.9375rem;
+    font-size: 1rem;
     color: #262626;
   }
   & p:last-child {
@@ -115,4 +114,5 @@ const HighlightedName = styled.span`
 
 const Relation = styled.div`
   width: inherit;
+  margin-left: var(--el-between);
 `;
