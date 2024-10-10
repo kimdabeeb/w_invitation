@@ -21,14 +21,14 @@ const Nav = styled.nav<{ isVisible: boolean }>`
   min-width: 65px;
   position: fixed;
   bottom: 15px;
-  right: 5px;
+  right: 3px;
   display: ${(props) => (props.isVisible ? 'flex' : 'none')};
 `;
 
 const Button = styled.button`
   padding: 6px;
   border-radius: 50%;
-  border: 1px solid #808080;
+  border: 1px solid #aeaeae;
   background: #fff;
   outline: none;
   box-shadow: none;

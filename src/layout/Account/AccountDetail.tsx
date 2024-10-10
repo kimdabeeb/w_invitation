@@ -50,7 +50,7 @@ const AccountWrap = ({
             </AccountButton>
           )}
           <CopyButton onClick={handleCopy}>
-            <Copy fill="#a5a5a5" />
+            <Copy fill="#aeaeae" />
           </CopyButton>
         </AccountMethod>
       </Details>
