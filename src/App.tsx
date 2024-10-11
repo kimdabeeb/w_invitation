@@ -20,12 +20,13 @@ function App() {
 
   useEffect(() => {
     AOS.init({
-      offset: 15,
+      offset: 100, // pixel
+      delay: 50,
       duration: 1200,
-      easing: 'ease-in',
+      easing: 'ease-in-out',
       once: true,
     });
-
+    AOS.refreshHard();
     window.addEventListener('scroll', checkScrollPosition);
     return () => {
       window.removeEventListener('scroll', checkScrollPosition);

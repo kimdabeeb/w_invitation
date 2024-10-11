@@ -9,17 +9,17 @@ const Account = () => {
   const { hostInfo } = data;
   return (
     <AccountWrap data-aos="fade">
-      <TitleCont>
-        <Title data-aos="fade-up" style={{ fontSize: '1.125rem', fontWeight: 'bold' }}>마음 전하실 곳</Title>
-        <hr data-aos="fade-up" />
-        <Title data-aos="fade-up" style={{ fontSize: '0.9rem' }}>
+      <TitleCont data-aos="fade-up">
+        <Title data-aos="fade-up" data-aos-duration="2000" style={{ fontSize: '1.125rem', fontWeight: 'bold' }}>마음 전하실 곳</Title>
+        <hr data-aos="fade-up" data-aos-duration="2000" />
+        <Title data-aos="fade-up" data-aos-duration="2000"style={{ fontSize: '0.9rem' }}>
           참석이 어려우신 분들을 위해 기재하였습니다 <br />
           너그러운 마음으로 양해부탁드립니다
         </Title>
       </TitleCont>
       {hostInfo.map((host) => {
         return (
-          <Accordion data-aos="fade-up" data-aos-delay="200"  title={host.host} key={host.host}>
+          <Accordion data-aos="fade-up" data-aos-delay="3000" title={host.host} key={host.host}>
             {host.accountInfo.map((account) => {
               return (
                 <AccountDetail

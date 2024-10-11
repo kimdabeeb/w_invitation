@@ -39,7 +39,7 @@ const ShareBox = () => {
 export default ShareBox;
 
 const SnsCont = styled.div`
-  padding: calc(var(--el-between) * 4) calc(var(--el-between) * 3) var(--el-between);
+  padding: calc(var(--el-between) * 4) calc(var(--el-between) * 4) var(--el-between);
   display: var(--el-flex);
   flex-direction: var(--el-column);
   align-items: var(--el-center);

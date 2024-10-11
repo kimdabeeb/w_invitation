@@ -11,14 +11,14 @@ const CalendarWrap = () => {
   const markedDate = moment(marks[0], 'DD-MM-YYYY').toDate();
 
   return (
-    <Wrap data-aos="fade" data-aos-delay="150" style={{ marginBottom: '2.5rem' }}>
-      <CustomEn>WEDDING DAY</CustomEn>
-      <TitleCont>
+    <Wrap style={{ marginBottom: '2.5rem' }}>
+      <CustomEn data-aos="fade-up" data-aos-duration="1800">WEDDING DAY</CustomEn>
+      <TitleCont data-aos="fade-up" data-aos-duration="1800">
         <Title>{greeting.eventDay}</Title>
         <Title>Saturday, March 1, 2025 | PM 15:40 </Title>
+        <hr style={{ borderTop: '1px solid #e5e7eb', margin: '3rem auto 0' }} />
       </TitleCont>
-      <hr style={{ borderTop: '1px solid #e5e7eb', margin: '0 auto 2rem' }} />
-      <div data-aos="fade" data-aos-delay="300">
+      <div data-aos="fade-up" data-aos-duration="2000">
         <Calendar
           formatDay={(locale = 'ko', date) => moment(date).locale(locale).format('D')}
           selectRange={false}
@@ -36,8 +36,8 @@ const CalendarWrap = () => {
         />
       </div>
       <style>{`
-      .react-calendar * {font-family: GowunBatang; text-decoration: unset!important; cursor: none;}
-      .react-calendar { border: none; color:#171717!important;
+      .react-calendar * {background: #fff!important; font-family: GowunBatang; text-decoration: unset!important;}
+      .react-calendar {border: none;
         .highlight {
           background: #afc8d4;
           border-radius: 50%;
@@ -47,38 +47,22 @@ const CalendarWrap = () => {
         }
       }
       
-      .react-calendar__navigation__label__labelText { font-size: 1.125rem; }
+      .react-calendar__navigation {margin-bottom: 1.5rem;}
+      .react-calendar__navigation__label__labelText { font-size: 1.25rem; color:#171717;}
       .react-calendar__title { font-size: .95rem; padding-top: 12px; padding-bottom:12px; color:#171717!important; }
-      .react-calendar > button:hover,  .react-calendar > button.active { cursor: none; background: unset; }
+     // .react-calendar > button:hover,  .react-calendar > button.active { cursor: none; background: unset; }
+      .react-calendar__month-view__days__day--weekend.highlight {color: #fff!important; font-weight: bold;}
       .react-calendar__tile.react-calendar__month-view__days__day {color:#171717!important;}
-      .react-calendar__tile.react-calendar__month-view__days__day--weekend { color: #d10000!important;;}
-      .react-calendar__month-view__days__day--weekend.highlight { color: #fff!important; font-weight: bold; }
-      .react-calendar__navigation__label { background: #fff; }
+      .react-calendar__tile.react-calendar__month-view__days__day--weekend {color: #d10000!important;}
       .react-calendar__month-view__weekdays {margin-bottom:.6rem;}
-      .react-calendar__navigation {
-        display: flex;
-        text-align: center;
-        align-items: center;
-        padding: 0 .5rem;
-        margin-bottom: 2rem;
-          .react-calendar__navigation button {
-            font-size: 1rem;
-            min-width: 20px;
-          }
-          .react-calendar__navigation__label {
-            width: 5.5rem;
-            height: 1.375rem;
-            font-size: 16px;
-            border: none;
-            font-weight: 700;
-            background-color: #fff;
-          }
-      }
+      .react-calendar__navigation {}
+
+      ..react-calendar__viewContainer,
       .react-calendar__tile--active,
       .react-calendar__tile--active:enabled:hover,
       .react-calendar__navigation button:disabled,
       .react-calendar__navigation button:enabled:hover, 
-      .react-calendar__navigation button:enabled:focus { background-color: unset!important; background: unset!important; color: #171717; cursor: none; }
+      .react-calendar__navigation button:enabled:focus { background-color: unset!important; background: unset!important; cursor: none; pointer-events: none;}
     }
     `}</style>
     </Wrap>

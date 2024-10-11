@@ -20,12 +20,14 @@ const PhotoGallery = () => {
   };
 
   return (
-    <Wrap style={{ paddingLeft: '0', paddingRight: '0' }}>
-      <CustomEn data-aos="fade">Gallery</CustomEn>
-      <TitleCont data-aos="fade">
+    <Wrap style={{ paddingLeft: '0', paddingRight: '0', marginBottom: '2rem' }}>
+      <div data-aos="fade-up" data-aos-duration="2000">
+      <CustomEn>Gallery</CustomEn>
+      <TitleCont>
         <Title>사진을 클릭하시면 전체 화면 보기가 가능합니다</Title>
-      </TitleCont>
-      <Wrap data-aos="fade" data-aos-delay="100" style={{ padding: '0' }}>
+        </TitleCont>
+      </div>
+      <Wrap data-aos="fade" data-aos-duration="2000" style={{ padding: '0' }}>
         <Gallery>
           <Swiper
             modules={[Navigation, Pagination]}

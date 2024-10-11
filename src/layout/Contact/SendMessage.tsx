@@ -4,18 +4,16 @@ import { CustomEn, Title, Paragraph } from '@/components/ContentsFont';
 
 const SendMessage = () => {
   return (
-    <Information data-aos="fade" data-aos-offset="100" data-aos-anchor="center-top">
-      <div data-aos="fade">
-        <CustomEn>INFORMATION</CustomEn>
-        <TitleCont>
+    <Information data-aos="fade">
+      <CustomEn data-aos="fade-up" data-aos-duration="2000">INFORMATION</CustomEn>
+      <TitleCont data-aos="fade-up" data-aos-duration="2000">
           <Title style={{ lineHeight: '2.5', fontWeight: 'bold' }}>안내</Title>
           <Title>웨딩홀 사전 안내를 드립니다</Title>
-        </TitleCont>
-      </div>
-      <Notice data-aos="fade-up" data-aos-delay="20">
+      </TitleCont>
+      <Notice data-aos="fade-up" data-aos-duration="2000">
         <Paragraph>
           환경보호를 위해 화환을 정중히 사양하고있습니다. <br />
-          보내주신 마음 감사히 받겠습니다. 😊
+          보내주신 마음만 감사히 받겠습니다. 😊
         </Paragraph>
       </Notice>
     </Information>
@@ -50,5 +48,6 @@ export const Notice = styled.div`
     line-height: 2;
     margin: 0;
     font-weight: 500;
+    letter-spacing: -.5px;
   }
 `;

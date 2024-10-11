@@ -8,20 +8,27 @@ import { Title, CustomEn } from '@/components/ContentsFont.tsx';
 const Location = () => {
   const { mapInfo } = data;
   return (
-    <Wrap
-      data-aos="fade"
-      style={{ background: 'var(--bg-sub)', marginTop: '3rem' }}>
-      <div data-aos="fade" data-aos-delay="200">
-        <CustomEn>Location</CustomEn>
-        <TitleCont>
-          <Title style={{ fontWeight: '600' }}>{mapInfo.address1}</Title>
-          <Title style={{ fontSize: '.85rem' }}>{mapInfo.address2}</Title>
-        </TitleCont>
-      </div>
+    <div style={{ background: 'var(--bg-sub)' }}>
+      <Wrap
+        data-aos="fade"
+        style={{ paddingBottom: '0' }}>
+        <div data-aos="fade-up" data-aos-duration="2000">
+          <CustomEn>Location</CustomEn>
+          <TitleCont>
+            <Title style={{ fontWeight: '600' }}>{mapInfo.address1}</Title>
+            <Title style={{ fontSize: '.85rem' }}>{mapInfo.address2}</Title>
+          </TitleCont>
+        </div>
+      </Wrap>
       <Map />
-      <MapButtons />
-      <Address />
-    </Wrap>
+      <Wrap
+        data-aos="fade-up"
+        data-aos-duration="2000"
+        style={{paddingTop: '0' }}>
+        <MapButtons />
+        <Address />
+      </Wrap>
+    </div>
   );
 };
 

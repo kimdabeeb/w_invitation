@@ -19,7 +19,7 @@ export const Wrap = styled.section`
   display: var(--el-flex);
   align-items: var(--el-center);
   flex-direction: var(--el-column);
-  padding: calc(var(--el-between) * 8) calc(var(--el-between) * 2.5) calc(var(--el-between) * 4);
+  padding: calc(var(--el-between) * 8) calc(var(--el-between) * 4) calc(var(--el-between) * 4);
   & hr {
     width: 100%;
     border: 0;

@@ -9,7 +9,7 @@ const FloatingBar = ({ isVisible }: { isVisible: boolean }) => {
   return (
     <Nav isVisible={isVisible}>
       <Button onClick={handleScroll}>
-        <Upward fill="#808080" />
+        <Upward fill="#adb5ba" />
       </Button>
     </Nav>
   );
@@ -18,9 +18,10 @@ const FloatingBar = ({ isVisible }: { isVisible: boolean }) => {
 export default FloatingBar;
 
 const Nav = styled.nav<{ isVisible: boolean }>`
-  min-width: 65px;
+  min-width: 50px;
+  z-index: 10;
   position: fixed;
-  bottom: 15px;
+  bottom: 25px;
   right: 3px;
   display: ${(props) => (props.isVisible ? 'flex' : 'none')};
 `;
@@ -28,7 +29,7 @@ const Nav = styled.nav<{ isVisible: boolean }>`
 const Button = styled.button`
   padding: 6px;
   border-radius: 50%;
-  border: 1px solid #aeaeae;
+  border: 1px solid #adb5ba;
   background: #fff;
   outline: none;
   box-shadow: none;

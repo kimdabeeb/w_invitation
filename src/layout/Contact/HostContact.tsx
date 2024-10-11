@@ -17,7 +17,7 @@ export default HostContact;
 
 const HostInfo = ({ person }: { person: BrideAndGroomParents }) => {
   return (
-    <div data-aos="fade">
+    <div data-aos="fade" >
       <HostDetails>
         {person.parents && (
           <>
@@ -47,11 +47,11 @@ const HostCont = styled.div`
   display: var(--el-flex);
   flex-direction: var(--el-column);
   gap: 25px;
-  padding: calc(var(--el-between) * 6.5) calc(var(--el-between) * 5.5);
+  padding: calc(var(--el-between) * 8) calc(var(--el-between) * 6.5);
   background: var(--bg-sub);
   font-family: var(--font-title);
   > div:nth-of-type(2) {
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #cacaca;
     margin-top: 1rem;
     padding-top: 2rem;
   }
@@ -66,7 +66,7 @@ const HostCont = styled.div`
     font-weight: 400;
     position: absolute;
     top: -5px;
-    right: 35px;
+    right: 38px;
   }
 
   > div:nth-of-type(2) > span:nth-of-type(1) > p:last-child::before {
@@ -75,18 +75,19 @@ const HostCont = styled.div`
     font-weight: 400;
     position: absolute;
     top: -5px;
-    right: 35px;
+    right: 38px;
   }
 `;
 
 const HostDetails = styled.div`
   font-size: 1rem;
+  word-spacing: 5px;
   display: var(--el-flex);
   align-items: var(--el-center);
   justify-content: space-between;
   font-weight: bold;
   white-space: nowrap;
-  margin-bottom: calc(var(--el-between) * 1.5);
+  margin-bottom: calc(var(--el-between) * 2.25);
 `;
 
 const RelationText = styled.div`
