@@ -12,7 +12,9 @@ const CalendarWrap = () => {
 
   return (
     <Wrap style={{ marginBottom: '2.5rem' }}>
-      <CustomEn data-aos="fade-up" data-aos-duration="1800">WEDDING DAY</CustomEn>
+      <CustomEn data-aos="fade-up" data-aos-duration="1800">
+        WEDDING DAY
+      </CustomEn>
       <TitleCont data-aos="fade-up" data-aos-duration="1800">
         <Title>{greeting.eventDay}</Title>
         <Title>Saturday, March 1, 2025 | PM 15:40 </Title>
@@ -36,24 +38,17 @@ const CalendarWrap = () => {
         />
       </div>
       <style>{`
-      .react-calendar * {background: #fff!important; font-family: GowunBatang; text-decoration: unset!important;}
-      .react-calendar {border: none;
-        .highlight {
-          background: #afc8d4;
-          border-radius: 50%;
-          max-width: 38px!important;
-          position: relative;
-          left: 6px;
-        }
-      }
+      .react-calendar * {font-family: GowunBatang; text-decoration: unset!important;}
+      .react-calendar {background: #fff!important; border: none;}
       
       .react-calendar__navigation {margin-bottom: 1.5rem;}
       .react-calendar__navigation__label__labelText { font-size: 1.25rem; color:#171717;}
       .react-calendar__title { font-size: .95rem; padding-top: 12px; padding-bottom:12px; color:#171717!important; }
-     // .react-calendar > button:hover,  .react-calendar > button.active { cursor: none; background: unset; }
+      .react-calendar__tile--active { cursor: none; background: unset!important; }
       .react-calendar__month-view__days__day--weekend.highlight {color: #fff!important; font-weight: bold;}
       .react-calendar__tile.react-calendar__month-view__days__day {color:#171717!important;}
       .react-calendar__tile.react-calendar__month-view__days__day--weekend {color: #d10000!important;}
+      .react-calendar__tile.react-calendar__month-view__days__day--weekend.highlight { background: #afc8d4!important; color: #fff!important; border-radius: 50%; max-width: 38px!important; position: relative; left: 6px;}
       .react-calendar__month-view__weekdays {margin-bottom:.6rem;}
       .react-calendar__navigation {}
 
@@ -62,7 +57,7 @@ const CalendarWrap = () => {
       .react-calendar__tile--active:enabled:hover,
       .react-calendar__navigation button:disabled,
       .react-calendar__navigation button:enabled:hover, 
-      .react-calendar__navigation button:enabled:focus { background-color: unset!important; background: unset!important; cursor: none; pointer-events: none;}
+      .react-calendar__navigation button:enabled:focus {background-color: unset!important; background: unset!important; cursor: none; pointer-events: none;}
     }
     `}</style>
     </Wrap>
