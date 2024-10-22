@@ -9,10 +9,8 @@ const Location = () => {
   const { mapInfo } = data;
   return (
     <div style={{ background: 'var(--bg-sub)' }}>
-      <Wrap
-        data-aos="fade"
-        style={{ paddingBottom: '0' }}>
-        <div data-aos="fade-up" data-aos-duration="2000">
+      <Wrap style={{ paddingBottom: '0' }}>
+        <div data-aos="fade-up">
           <CustomEn>Location</CustomEn>
           <TitleCont>
             <Title style={{ fontWeight: '600' }}>{mapInfo.address1}</Title>
@@ -21,10 +19,7 @@ const Location = () => {
         </div>
       </Wrap>
       <Map />
-      <Wrap
-        data-aos="fade-up"
-        data-aos-duration="2000"
-        style={{paddingTop: '0' }}>
+      <Wrap data-aos="fade-up" style={{ paddingTop: '0' }}>
         <MapButtons />
         <Address />
       </Wrap>

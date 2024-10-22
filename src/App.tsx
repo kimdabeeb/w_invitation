@@ -20,11 +20,11 @@ function App() {
 
   useEffect(() => {
     AOS.init({
-      offset: 100, // pixel
-      delay: 50,
-      duration: 1200,
+      offset: 300, // pixel
+      delay: 100,
+      duration: 1500,
       easing: 'ease-in-out',
-      once: true,
+      once: false,
     });
     AOS.refreshHard();
     window.addEventListener('scroll', checkScrollPosition);

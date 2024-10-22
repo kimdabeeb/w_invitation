@@ -12,10 +12,8 @@ const Intro = () => {
 
   return (
     <>
-      <Wrap
-        data-aos="fade"
-        style={{ padding: 'calc(var(--el-between) * 3) calc(var(--el-between) * 2) 0' }}>
-        <MainImg src={mainImg} />
+      <Wrap style={{ padding: 'calc(var(--el-between) * 3) calc(var(--el-between) * 2) 0' }}>
+        <MainImg data-aos="fade" src={mainImg} />
         <Invitation data-aos-delay="200">
           <ul>
             <li data-aos="fade" data-aos-delay="0">
@@ -61,8 +59,8 @@ const Intro = () => {
             </p>
           </HostInfo> */}
         </Invitation>
-        <HostInfo data-aos="fade" data-aos-delay="400">
-          <p data-aos="fade">
+        <HostInfo data-aos="fade" data-aos-delay="400" data-aos-duration="2000">
+          <p>
             신랑
             <Host person={groom} />
             <span>and</span>신부

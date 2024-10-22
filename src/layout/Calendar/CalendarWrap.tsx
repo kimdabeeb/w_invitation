@@ -39,8 +39,7 @@ const CalendarWrap = () => {
       </div>
       <style>{`
       .react-calendar * {font-family: GowunBatang; text-decoration: unset!important;}
-      .react-calendar {background: #fff!important; border: none;}
-      
+      .react-calendar,.react-calendar__navigation button:disabled {background: #fff!important; border: none;}
       .react-calendar__navigation {margin-bottom: 1.5rem;}
       .react-calendar__navigation__label__labelText { font-size: 1.25rem; color:#171717;}
       .react-calendar__title { font-size: .95rem; padding-top: 12px; padding-bottom:12px; color:#171717!important; }

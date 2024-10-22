@@ -19,8 +19,6 @@ export default MapButtons;
 const MapButton = styled.div`
   display: var(--el-flex);
   justify-content: var(--el-center);
-  margin: calc(var(--el-between) * 1.5);
-  gap: var(--el-between);
 `;
 
 const Button = styled.button`
@@ -32,10 +30,9 @@ const Button = styled.button`
   font-size: var(--font-size);
   display: var(--el-flex);
   align-items: var(--el-center);
-  justify-content: var(--el-center);
   color: var(--color-black2);
   text-decoration: none;
-  gap: 15px;
+  gap: 10px;
   & img {
     width: 25px;
     aspect-ratio: 1/1;
