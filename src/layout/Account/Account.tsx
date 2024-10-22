@@ -8,8 +8,8 @@ import { Title } from '@/components/ContentsFont.tsx';
 const Account = () => {
   const { hostInfo } = data;
   return (
-    <AccountWrap>
-      <TitleCont data-aos="fade-up" data-aos-duration="2000">
+    <AccountWrap data-aos="fade-up" data-aos-duration="2000">
+      <TitleCont>
         <Title style={{ fontSize: '1.125rem', fontWeight: 'bold' }}>마음 전하실 곳</Title>
         <hr />
         <Title style={{ fontSize: '0.9rem' }}>
@@ -17,29 +17,25 @@ const Account = () => {
           너그러운 마음으로 양해부탁드립니다
         </Title>
       </TitleCont>
-      {hostInfo.map((host) => {
-        return (
-          <Accordion
-            data-aos="fade-up"
-            data-aos-duration="2500"
-            title={host.host}
-            key={host.host}>
-            {host.accountInfo.map((account) => {
-              return (
-                <AccountDetail
-                  key={account.name}
-                  name={account.name}
-                  relation={account.relation}
-                  bank={account.bank}
-                  account={account.account}
-                  kakaopayAccount={account.kakaopayAccount}
-                  tossAccount={account.tossAccount}
-                />
-              );
-            })}
-          </Accordion>
-        );
-      })}
+        {hostInfo.map((host) => {
+          return (
+            <Accordion title={host.host} key={host.host}>
+              {host.accountInfo.map((account) => {
+                return (
+                  <AccountDetail
+                    key={account.name}
+                    name={account.name}
+                    relation={account.relation}
+                    bank={account.bank}
+                    account={account.account}
+                    kakaopayAccount={account.kakaopayAccount}
+                    tossAccount={account.tossAccount}
+                  />
+                );
+              })}
+            </Accordion>
+          );
+        })}
     </AccountWrap>
   );
 };

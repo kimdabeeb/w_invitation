@@ -6,7 +6,7 @@ import { BrideAndGroomParents } from '@/types/data.ts';
 const HostContact = () => {
   const { groom, bride } = data.greeting.host;
   return (
-    <HostCont data-aos="fade">
+    <HostCont data-aos="fade-up" data-aos-duration="2000">
       <HostInfo person={groom} />
       <HostInfo person={bride} />
     </HostCont>
@@ -17,7 +17,7 @@ export default HostContact;
 
 const HostInfo = ({ person }: { person: BrideAndGroomParents }) => {
   return (
-    <div data-aos="fade" >
+    <div data-aos="fade-up" data-aos-offset="0" data-aos-duration="2000">
       <HostDetails>
         {person.parents && (
           <>

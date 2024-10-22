@@ -5,12 +5,12 @@ import { CustomEn, Title, Paragraph } from '@/components/ContentsFont';
 const SendMessage = () => {
   return (
     <Information data-aos="fade">
-      <CustomEn data-aos="fade-up" data-aos-duration="2000">INFORMATION</CustomEn>
-      <TitleCont data-aos="fade-up" data-aos-duration="2000">
+      <CustomEn data-aos="fade-up">INFORMATION</CustomEn>
+      <TitleCont data-aos="fade-up">
           <Title style={{ lineHeight: '2.5', fontWeight: 'bold' }}>안내</Title>
           <Title>웨딩홀 사전 안내를 드립니다</Title>
       </TitleCont>
-      <Notice data-aos="fade-up" data-aos-duration="2000">
+      <Notice data-aos="fade-up">
         <Paragraph>
           환경보호를 위해 화환을 정중히 사양하고있습니다. <br />
           보내주신 마음만 감사히 받겠습니다. 😊

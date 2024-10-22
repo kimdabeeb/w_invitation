@@ -7,7 +7,7 @@ const MapButtons = () => {
   const { naverMap, kakaoMap } = data.mapInfo;
 
   return (
-    <MapButton  data-aos="fade">
+    <MapButton data-aos="fade">
       <Button onClick={() => window.open(naverMap)}><img src={NaverMap} />네이버 지도</Button>
       <Button onClick={() => window.open(kakaoMap)}><img src={KakaoMap} />카카오맵</Button>
     </MapButton>
@@ -23,7 +23,7 @@ const MapButton = styled.div`
 
 const Button = styled.button`
   width: 50%;
-  margin: calc(var(--el-between) * 1.25) 0;
+  margin: calc(var(--el-between) * 4) 0 calc(var(--el-between) * 3);
   font-family: var(--font-paragraph);
   outline: none;
   box-shadow: none;

@@ -20,10 +20,10 @@ function App() {
 
   useEffect(() => {
     AOS.init({
-      offset: 300, // pixel
-      delay: 100,
+      offset: 50, // pixel
+      delay: 50,
       duration: 1500,
-      easing: 'ease-in-out',
+      easing: 'ease',
       once: false,
     });
     AOS.refreshHard();
