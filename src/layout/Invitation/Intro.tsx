@@ -68,8 +68,8 @@ const MainImg = styled.img`
 const Invitation = styled.ul`
   padding-top: calc(var(--el-between) * 6);
   li {
-    font-size: calc(var(--font-size) / 1.125);
-    letter-spacing: -0.15px;
+    font-size: calc(var(--font-size) / 1.3);
+    letter-spacing: -0.35px;
     word-spacing: -0.35px;
     line-height: 3;
   }
@@ -77,7 +77,7 @@ const Invitation = styled.ul`
     margin-bottom: calc(var(--el-between) * 6);
     line-height: 2.4;
     & span {
-      font-size: calc(var(--font-size) / 1.2);
+      font-size: calc(var(--font-size) / 1.325);
     }
   }
   li:last-of-type {
@@ -94,7 +94,7 @@ const HostInfo = styled.div`
   p {
     font-family: var(--font-subTitleEn);
     padding: 0 var(--el-between);
-    font-size: calc(var(--font-size) + 2.5);
+    font-size: calc(var(--font-size) / 1.35);
     letter-spacing: -1px;
     margin-right: var(--el-between);
   }
@@ -102,7 +102,7 @@ const HostInfo = styled.div`
 
 
 const HostDetails = styled.b`
-  font-size: calc(var(--font-size) + 2.5);
+  font-size: calc(var(--font-size) / 1.2);
  // font-family: var(--font-paragraph);
   padding: 0 var(--el-between);
 `;

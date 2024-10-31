@@ -21,9 +21,9 @@ function App() {
   useEffect(() => {
     AOS.init({
       offset: 50, // pixel
-      delay: 50,
+      delay: 1200,
       duration: 1500,
-      easing: 'ease',
+      easing: 'ease-in-out',
       once: false,
     });
     AOS.refreshHard();

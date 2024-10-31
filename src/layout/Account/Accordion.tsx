@@ -14,7 +14,7 @@ const Accordion = ({ title, children }: IAccordionProps) => {
   };
 
   return (
-    <AccordionCont data-aos="fade-up">
+    <AccordionCont data-aos="fade-up" data-aos-delay="1000">
       <AccordionTitle isActive={isOpen} onClick={toggleAccordion}>
         <p>{title}에게</p>
         <span>

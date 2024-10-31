@@ -8,34 +8,44 @@ import { Title } from '@/components/ContentsFont.tsx';
 const Account = () => {
   const { hostInfo } = data;
   return (
-    <AccountWrap data-aos="fade-up" data-aos-duration="2000">
+    <AccountWrap>
       <TitleCont>
-        <Title style={{ fontSize: '1.125rem', fontWeight: 'bold' }}>마음 전하실 곳</Title>
-        <hr />
-        <Title style={{ fontSize: '0.9rem' }}>
+        <Title
+          data-aos="fade-up"
+          data-aos-delay="0"
+          data-aos-offset="0"
+          style={{ fontSize: '1.125rem', fontWeight: 'bold' }}>
+          마음 전하실 곳
+        </Title>
+        <hr data-aos="fade-up" />
+        <Title
+          data-aos="fade-up"
+          data-aos-offset="150"
+          data-aos-delay="500"
+          style={{ fontSize: '0.9rem' }}>
           참석이 어려우신 분들을 위해 기재하였습니다 <br />
           너그러운 마음으로 양해부탁드립니다
         </Title>
       </TitleCont>
-        {hostInfo.map((host) => {
-          return (
-            <Accordion title={host.host} key={host.host}>
-              {host.accountInfo.map((account) => {
-                return (
-                  <AccountDetail
-                    key={account.name}
-                    name={account.name}
-                    relation={account.relation}
-                    bank={account.bank}
-                    account={account.account}
-                    kakaopayAccount={account.kakaopayAccount}
-                    tossAccount={account.tossAccount}
-                  />
-                );
-              })}
-            </Accordion>
-          );
-        })}
+      {hostInfo.map((host) => {
+        return (
+          <Accordion title={host.host} key={host.host}>
+            {host.accountInfo.map((account) => {
+              return (
+                <AccountDetail
+                  key={account.name}
+                  name={account.name}
+                  relation={account.relation}
+                  bank={account.bank}
+                  account={account.account}
+                  kakaopayAccount={account.kakaopayAccount}
+                  tossAccount={account.tossAccount}
+                />
+              );
+            })}
+          </Accordion>
+        );
+      })}
     </AccountWrap>
   );
 };
