@@ -4,7 +4,6 @@
 declare global {
   interface Window {
     navermaps: typeof import('navermaps');
-    Kakao: any;
   }
 }
 
