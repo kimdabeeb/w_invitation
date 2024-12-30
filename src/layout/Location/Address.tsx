@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
-import Car from '@/assets/icons/car.svg?react';
 import Bus from '@/assets/icons/bus.svg?react';
-import Subway from '@/assets/icons/subway.svg?react';
+import Car from '@/assets/icons/car.svg?react';
 import Parking from '@/assets/icons/parking.svg?react';
+import Subway from '@/assets/icons/subway.svg?react';
 
 const Address = () => {
   return (
@@ -14,7 +14,7 @@ const Address = () => {
             자차
           </p>
           <p>
-            내비게이션 : '웨딩여율리' 또는 '노총회관' 검색 <br />
+            내비게이션 : &apos;웨딩여율리&apos; 또는 &apos;노총회관&apos; 검색 <br />
             서울시 영등포구 국제금융로6길 26
           </p>
         </li>

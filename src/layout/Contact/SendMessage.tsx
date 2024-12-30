@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
+import { CustomEn, Paragraph, Title } from '@/components/ContentsFont';
 import { TitleCont } from '@/components/ContentsWrap';
-import { CustomEn, Title, Paragraph } from '@/components/ContentsFont';
 
 const SendMessage = () => {
   return (

@@ -46,6 +46,7 @@ const AccordionTitle = styled.div<{ isActive: boolean }>`
   cursor: pointer;
   & > p {
     color: #4c4c4c;
+    font-size: .85rem;
   }
   & span {
     align-self: baseline;
@@ -66,10 +67,9 @@ const AccordionBox = styled.div`
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
   position: relative;
   top: -5px;
-  > div:nth-of-type(2),
-  div:nth-of-type(4) {
+  > div:nth-of-type(2) {
     border-bottom: 1px solid #ddd;
-    padding-bottom: 8px;
-    margin-bottom: 14px;
+    padding-bottom: 14px;
+    margin-bottom: 16px;
   }
 `;

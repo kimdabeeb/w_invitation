@@ -1,7 +1,7 @@
-import ShareKakaoBtn from '@/utils/ShareKakaoBtn';
 import styled from '@emotion/styled';
 import Copy from '@/assets/icons/copy.svg?react';
-import { SubTitle, CustomEn } from '@/components/ContentsFont';
+import { CustomEn, SubTitle } from '@/components/ContentsFont';
+import ShareKakaoBtn from '@/utils/ShareKakaoBtn';
 
 const ShareBox = () => {
   const handleCopy = () => {

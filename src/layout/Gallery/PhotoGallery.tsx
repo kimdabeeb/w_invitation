@@ -1,12 +1,12 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
 import { Gallery, Item } from 'react-photoswipe-gallery';
+import { Navigation, Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'photoswipe/style.css';
-import { Wrap, TitleCont } from '@/components/ContentsWrap';
 import { CustomEn, Title } from '@/components/ContentsFont';
+import { TitleCont, Wrap } from '@/components/ContentsWrap';
 import images from '@/layout/Gallery/Images.ts';
 import '@/layout/Gallery/gallery.css';
 
@@ -24,7 +24,7 @@ const PhotoGallery = () => {
       <div data-aos="fade-up">
         <CustomEn>Gallery</CustomEn>
         <TitleCont>
-          <Title>사진을 클릭하시면 전체 화면 보기가 가능합니다</Title>
+          <Title style={{fontSize:'.825rem'}}>사진을 클릭하시면 전체 화면 보기가 가능합니다</Title>
         </TitleCont>
       </div>
       <Wrap data-aos="fade-up" data-aos-duration="2000" style={{ padding: '0' }}>

@@ -48,46 +48,42 @@ const HostCont = styled.div`
   flex-direction: var(--el-column);
   gap: 25px;
   padding: calc(var(--el-between) * 8) calc(var(--el-between) * 6.5);
-  background: var(--bg-sub);
-  font-family: var(--font-title);
+  background: var(--bg-main);
+  font-family: var(--font-subTitle);
+  color: var(--color-black);
   > div:nth-of-type(2) {
     border-top: 1px solid #cacaca;
     margin-top: 1rem;
     padding-top: 2rem;
   }
-
-  & div:nth-of-type(3) > div {
-    font-weight: 400;
-  }
-
   > div:nth-of-type(1) > span:nth-of-type(1) > p:last-child::before {
     content: 'groom';
     font-size: 0.75rem;
-    font-weight: 400;
+    font-family: var(--font-subTitleEn);
     position: absolute;
     top: -5px;
-    right: 38px;
+    right: 50px;
   }
 
   > div:nth-of-type(2) > span:nth-of-type(1) > p:last-child::before {
     content: 'bride';
     font-size: 0.75rem;
-    font-weight: 400;
+    font-family: var(--font-subTitleEn);
     position: absolute;
     top: -5px;
-    right: 38px;
+    right: 49px;
   }
 `;
 
 const HostDetails = styled.div`
-  font-size: 1rem;
+  /* font-size: 1rem; */
   word-spacing: 5px;
   display: var(--el-flex);
   align-items: var(--el-center);
   justify-content: space-between;
-  font-weight: bold;
   white-space: nowrap;
   margin-bottom: calc(var(--el-between) * 2.25);
+  font-size: .825rem;
 `;
 
 const RelationText = styled.div`
@@ -104,7 +100,7 @@ const HighlightedName = styled.span`
   display: var(--el-flex);
   justify-content: space-between;
   & p {
-    font-size: 1rem;
+    font-size: .825rem;
     color: #262626;
   }
   & p:last-child {

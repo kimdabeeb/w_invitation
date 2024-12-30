@@ -47,6 +47,7 @@ ul {
 
 div, section {
   width: 100%;
+  /* height: calc(var(--vh, 1vh) * 100); */
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -100,7 +101,7 @@ body {
   --font-subTitle:'GowunDodum';
   --font-subTitleEn:'JakartaSignature';
   --font-paragraph:'SUIT';
-  --font-size: .95rem;
+  --font-size: .9rem;
 
   --color-black: rgb(0, 0, 0);
   --color-black2: rgb(17, 17, 17);
@@ -168,3 +169,14 @@ body {
   font-family: 'JakartaSignature';
   src: url('../src/assets/fonts/JakartaSignature.woff2') format('woff2');
 }
+
+@font-face {
+  font-family: 'DearJane';
+  src: url('../src/assets/fonts/DearJane.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'WhiteAngelica';
+  src: url('../src/assets/fonts/WhiteAngelica.ttf') format('truetype');
+}
+

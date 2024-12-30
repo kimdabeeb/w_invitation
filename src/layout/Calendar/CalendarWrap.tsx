@@ -1,8 +1,8 @@
-import Calendar from 'react-calendar';
 import moment from 'moment';
+import Calendar from 'react-calendar';
 import data from '../../data.json';
-import { Wrap, TitleCont } from '@/components/ContentsWrap';
 import { CustomEn, Title } from '@/components/ContentsFont';
+import { TitleCont, Wrap } from '@/components/ContentsWrap';
 import 'react-calendar/dist/Calendar.css';
 
 const CalendarWrap = () => {
@@ -41,13 +41,13 @@ const CalendarWrap = () => {
       .react-calendar * {font-family: GowunBatang; text-decoration: unset!important;}
       .react-calendar,.react-calendar__navigation button:disabled {background: #fff!important; border: none;}
       .react-calendar__navigation {margin-bottom: 1.5rem;}
-      .react-calendar__navigation__label__labelText { font-size: 1.25rem; color:#171717;}
+      .react-calendar__navigation__label__labelText { font-size: 1.1rem; color:#171717;}
       .react-calendar__title { font-size: .95rem; padding-top: 12px; padding-bottom:12px; color:#171717!important; }
       .react-calendar__tile--active { cursor: none; background: unset!important; }
       .react-calendar__month-view__days__day--weekend.highlight {color: #fff!important; font-weight: bold;}
       .react-calendar__tile.react-calendar__month-view__days__day {color:#171717!important;}
       .react-calendar__tile.react-calendar__month-view__days__day--weekend {color: #d10000!important;}
-      .react-calendar__tile.react-calendar__month-view__days__day--weekend.highlight { background: #afc8d4!important; color: #fff!important; border-radius: 50%; max-width: 38px!important; position: relative; left: 6px;}
+      .react-calendar__tile.react-calendar__month-view__days__day--weekend.highlight { background: #cfe3ec!important; border-radius: 50%; font-size:1rem; aspect-ratio: 1 / .95; position: relative; top: -2px;}
       .react-calendar__month-view__weekdays {margin-bottom:.6rem;}
       .react-calendar__navigation {}
 

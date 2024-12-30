@@ -63,16 +63,17 @@ export default AccountWrap;
 const Info = styled.div`
   display: var(--el-flex);
   align-items: var(--el-center);
-  gap: 8px;
+  gap: 10px;
+  line-height: 1.8;
 `;
 
 const Relation = styled.span`
-  font-size: .875rem;
+  font-size: .825rem;
   color: #444;
 `;
 
 const Name = styled.span`
-  font-size: 0.875rem;
+  font-size: 0.825rem;
   font-weight: 600;
 `;
 
@@ -81,7 +82,8 @@ const Details = styled.div`
   align-items: var(--el-center);
   justify-content: space-between;
   white-space: nowrap;
-  font-size: 0.875rem;
+  letter-spacing: .3px;
+  font-size: 0.75rem;
 `;
 
 const AccountMethod = styled.div`

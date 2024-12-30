@@ -1,17 +1,19 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { useEffect, useRef, useState } from 'react';
-import { NavermapsProvider } from 'react-naver-maps';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { Container, Wrapper, GalleryWrap } from '@/components/ContentsWrap';
-import Intro from '@/layout/Invitation/Intro';
-import ShareBox from '@/layout/Invitation/ShareBox';
+import { NavermapsProvider } from 'react-naver-maps';
+import { Container, GalleryWrap, Wrapper } from '@/components/ContentsWrap';
+import Account from '@/layout/Account/Account';
 import CalendarWrap from '@/layout/Calendar/CalendarWrap';
 import HostContact from '@/layout/Contact/HostContact';
 import SendMessage from '@/layout/Contact/SendMessage';
-import PhotoGallery from '@/layout/Gallery/PhotoGallery';
-import Location from '@/layout/Location/Location';
-import Account from '@/layout/Account/Account';
 import FloatingBar from '@/layout/FloatingBar/FloatingBar.tsx';
+import PhotoGallery from '@/layout/Gallery/PhotoGallery';
+import Intro from '@/layout/Invitation/Intro';
+import ShareBox from '@/layout/Invitation/ShareBox';
+import Location from '@/layout/Location/Location';
+
 
 function App() {
   const ncpClientId = import.meta.env.VITE_APP_NAVERMAPS_CLIENT_ID;
@@ -20,15 +22,20 @@ function App() {
 
   useEffect(() => {
     AOS.init({
-      offset: 50, // pixel
-      delay: 1200,
-      duration: 1500,
+      offset: 20, // pixel
+      delay: 500,
+      duration: 1200,
       easing: 'ease-in-out',
-      once: false,
+      once: true,
     });
     AOS.refreshHard();
+
+    //setScreenHeight();
+    //window.addEventListener('resize', setScreenHeight);
     window.addEventListener('scroll', checkScrollPosition);
+
     return () => {
+      //window.removeEventListener('resize', setScreenHeight);
       window.removeEventListener('scroll', checkScrollPosition);
     };
   }, []);
@@ -47,6 +54,7 @@ function App() {
   };
 
   return (
+    <>
     <NavermapsProvider ncpClientId={ncpClientId}>
       <Container>
         <Wrapper>
@@ -64,6 +72,7 @@ function App() {
         </Wrapper>
       </Container>
     </NavermapsProvider>
+    </>
   );
 }
 

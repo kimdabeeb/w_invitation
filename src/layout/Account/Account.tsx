@@ -1,9 +1,9 @@
 import styled from '@emotion/styled';
-import data from '../../data.json';
-import AccountDetail from './AccountDetail.tsx';
 import Accordion from './Accordion.tsx';
-import { TitleCont } from '@/components/ContentsWrap';
+import AccountDetail from './AccountDetail.tsx';
+import data from '../../data.json';
 import { Title } from '@/components/ContentsFont.tsx';
+import { TitleCont } from '@/components/ContentsWrap';
 
 const Account = () => {
   const { hostInfo } = data;
@@ -22,7 +22,7 @@ const Account = () => {
           data-aos="fade-up"
           data-aos-offset="150"
           data-aos-delay="500"
-          style={{ fontSize: '0.9rem' }}>
+          style={{ fontSize: '0.8125rem' }}>
           참석이 어려우신 분들을 위해 기재하였습니다 <br />
           너그러운 마음으로 양해부탁드립니다
         </Title>
@@ -58,8 +58,7 @@ const AccountWrap = styled.div`
   padding: calc(var(--el-between) * 7) calc(var(--el-between) * 2.5);
   hr {
     width: 2.25rem;
-    height: 1px;
-    background: var(--color-black2);
+    background: var(--color-white2);
     margin: 2rem auto;
   }
 `;

@@ -41,22 +41,16 @@
       "host": "신랑측",
       "accountInfo": [
         {
-          "name": "최병홍",
-          "relation": "신랑 아버지",
-          "bank": "농협",
-          "account": "12345678901"
-        },
-        {
-          "name": "성정옥",
-          "relation": "신랑 어머니",
-          "bank": "농협",
-          "account": "12345678901"
+          "name": "최병홍 성정옥",
+          "relation": "신랑 부모님",
+          "bank": "국민",
+          "account": "529401-01-166045"
         },
         {
           "name": "최영준",
           "relation": "신랑",
           "bank": "신한",
-          "account": "12345678901",
+          "account": "110-334-687612",
           "kakaopayAccount": "",
           "tossAccount": ""
         }
@@ -66,22 +60,16 @@
       "host": "신부측",
       "accountInfo": [
         {
-          "name": "김용대",
-          "relation": "신부 아버지",
-          "bank": "국민",
-          "account": "12345678901"
-        },
-        {
-          "name": "이  선",
-          "relation": "신부 어머니",
+          "name": "김용대  이  선",
+          "relation": "신부 부모님",
           "bank": "신한",
-          "account": "12345678901"
+          "account": "110-363-396590"
         },
         {
           "name": "김다빈",
           "relation": "신부",
           "bank": "신한",
-          "account": "1234-5678-9012",
+          "account": "110-421-475083",
           "kakaopayAccount": "https://link.kakaopay.com/_/Q-ULgFw",
           "tossAccount": ""
         }
