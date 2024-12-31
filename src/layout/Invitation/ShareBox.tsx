@@ -17,7 +17,7 @@ const ShareBox = () => {
   };
   return (
     <>
-      <video muted autoPlay loop width={450}>
+      <video muted autoPlay loop>
         <source src={weddingVideo} type="video/mp4" />
       </video> 
       {/* <div
