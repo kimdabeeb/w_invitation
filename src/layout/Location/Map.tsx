@@ -1,4 +1,4 @@
-import data from '../../data.json';
+import data from 'data.json';
 import { Container as MapDiv, Marker, NaverMap, useNavermaps } from 'react-naver-maps';
 
 const Map = () => {
@@ -6,23 +6,21 @@ const Map = () => {
   const navermaps = useNavermaps();
 
   return (
-    <MapDiv
-      data-aos="fade-up"
-      data-aos-offset="0"
-      style={{
-        width: '100%',
-        height: '300px',
-      }}>
-      <NaverMap
-        defaultCenter={new navermaps.LatLng(lat, lon)}
-        defaultZoom={17}
-        draggable={false}
-        pinchZoom={false}
-        scrollWheel={false}
-        keyboardShortcuts={false}>
-        <Marker defaultPosition={new navermaps.LatLng(lat, lon)} />
-      </NaverMap>
-    </MapDiv>
+      <MapDiv
+        style={{
+          width: '100%',
+          height: '240px',
+        }}>
+        <NaverMap
+          defaultCenter={new navermaps.LatLng(lat, lon)}
+          defaultZoom={15}
+          draggable={false}
+          pinchZoom={false}
+          scrollWheel={false}
+          keyboardShortcuts={false}>
+          <Marker defaultPosition={new navermaps.LatLng(lat, lon)} />
+        </NaverMap>
+      </MapDiv>
   );
 };
 

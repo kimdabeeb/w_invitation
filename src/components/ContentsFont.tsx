@@ -2,7 +2,6 @@ import styled from '@emotion/styled';
 
 export const Title = styled.p`
   font-family: 'GowunBatang', serif;
-  letter-spacing: -.3px;
   word-spacing: -.3px;
 `;
 

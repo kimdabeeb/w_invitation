@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
-import data from '../../data.json';
-import NaverMap from '@/assets/icons/naver_map.png?url';
+import data from 'data.json';
 import KakaoMap from '@/assets/icons/kakao_map.png?url';
+import NaverMap from '@/assets/icons/naver_map.png?url';
 
 const MapButtons = () => {
   const { naverMap, kakaoMap } = data.mapInfo;
@@ -23,7 +23,7 @@ const MapButton = styled.div`
 
 const Button = styled.button`
   width: 50%;
-  margin: calc(var(--el-between) * 4) 0 calc(var(--el-between) * 3);
+  margin: calc(var(--el-between) * 2) 0 calc(var(--el-between) * 3);
   font-family: var(--font-paragraph);
   outline: none;
   box-shadow: none;

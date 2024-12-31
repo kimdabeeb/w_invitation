@@ -52,7 +52,7 @@ const HostCont = styled.div`
   font-family: var(--font-subTitle);
   color: var(--color-black);
   > div:nth-of-type(2) {
-    border-top: 1px solid #cacaca;
+    border-top: 1px solid var(--bg-sub2);
     margin-top: 1rem;
     padding-top: 2rem;
   }
@@ -62,7 +62,8 @@ const HostCont = styled.div`
     font-family: var(--font-subTitleEn);
     position: absolute;
     top: -5px;
-    right: 50px;
+    right: 15px;
+    transform: translateX(-50%);
   }
 
   > div:nth-of-type(2) > span:nth-of-type(1) > p:last-child::before {
@@ -71,7 +72,8 @@ const HostCont = styled.div`
     font-family: var(--font-subTitleEn);
     position: absolute;
     top: -5px;
-    right: 49px;
+    right: 15px;
+    transform: translateX(-50%);
   }
 `;
 

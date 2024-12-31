@@ -23,8 +23,8 @@ function App() {
   useEffect(() => {
     AOS.init({
       offset: 20, // pixel
-      delay: 500,
-      duration: 1200,
+      delay: 350,
+      duration: 1000,
       easing: 'ease-in-out',
       once: true,
     });
@@ -54,7 +54,6 @@ function App() {
   };
 
   return (
-    <>
     <NavermapsProvider ncpClientId={ncpClientId}>
       <Container>
         <Wrapper>
@@ -64,7 +63,7 @@ function App() {
           <GalleryWrap ref={galleryRef}>
             <PhotoGallery />
           </GalleryWrap>
-          <Location />
+          <Location /> 
           <Account />
           <SendMessage />
           <ShareBox />
@@ -72,7 +71,6 @@ function App() {
         </Wrapper>
       </Container>
     </NavermapsProvider>
-    </>
   );
 }
 

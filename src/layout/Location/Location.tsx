@@ -1,15 +1,15 @@
-import data from '../../data.json';
+import data from 'data.json';
 import Address from './Address.tsx';
 import Map from './Map.tsx';
 import MapButtons from './MapButtons.tsx';
-import { Wrap, TitleCont } from '@/components/ContentsWrap';
-import { Title, CustomEn } from '@/components/ContentsFont.tsx';
+import { CustomEn, Title } from '@/components/ContentsFont';
+import { TitleCont, Wrap } from '@/components/ContentsWrap';
 
 const Location = () => {
   const { mapInfo } = data;
   return (
     <div style={{ background: 'var(--bg-sub)' }}>
-      <Wrap data-aos="fade-up" style={{ paddingBottom: '0' }}>
+      <Wrap style={{ paddingBottom: '0' }}>
         <CustomEn>Location</CustomEn>
         <TitleCont>
           <Title style={{ fontWeight: '600' }}>{mapInfo.address1}</Title>
@@ -17,7 +17,7 @@ const Location = () => {
         </TitleCont>
       </Wrap>
       <Map />
-      <Wrap data-aos="fade-up" style={{ paddingTop: '0' }}>
+      <Wrap style={{ paddingTop: '0' }}>
         <MapButtons />
         <Address />
       </Wrap>

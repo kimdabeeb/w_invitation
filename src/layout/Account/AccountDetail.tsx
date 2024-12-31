@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import Copy from '@/assets/icons/copy.svg?react';
-import kakaopay from '@/assets/icons/kakaopay.webp?url';
+import kakaopay from '@/assets/icons/kakaopay.svg?url';
 import toss from '@/assets/icons/toss.webp?url';
 
 interface IAccountProps {
@@ -31,7 +31,7 @@ const AccountWrap = ({
   };
 
   return (
-    <>
+    <AccordionCont>
       <Info>
         <Relation>{relation}</Relation>
         <Name>{name}</Name>
@@ -39,6 +39,9 @@ const AccountWrap = ({
       <Details>
         {bank} {account}
         <AccountMethod>
+          <CopyButton onClick={handleCopy}>
+          <Copy />
+          </CopyButton>
           {kakaopayAccount && (
             <AccountButton href={kakaopayAccount} target="_blank" rel="noreferrer">
               <KakaopayImg src={kakaopay} alt="kakaopay" />
@@ -49,22 +52,26 @@ const AccountWrap = ({
               <TossImg src={toss} alt="toss" />
             </AccountButton>
           )}
-          <CopyButton onClick={handleCopy}>
-            <Copy fill="#aeaeae" />
-          </CopyButton>
         </AccountMethod>
       </Details>
-    </>
+    </AccordionCont>
   );
 };
 
 export default AccountWrap;
 
+const AccordionCont = styled.div`
+  background: var(--color-white);
+  padding: calc(var(--el-between)* 2);
+  border-radius: var(--el-between);
+  margin-bottom: calc(var(--el-between)* 2);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;  
+`;
+
 const Info = styled.div`
   display: var(--el-flex);
   align-items: var(--el-center);
-  gap: 10px;
-  line-height: 1.8;
+  justify-content: space-between;
 `;
 
 const Relation = styled.span`
@@ -84,6 +91,10 @@ const Details = styled.div`
   white-space: nowrap;
   letter-spacing: .3px;
   font-size: 0.75rem;
+  background: var(--color-white2);
+  margin-top: calc(var(--el-between)* 2);
+  padding: var(--el-between) calc(var(--el-between)* 2);
+  border-radius: var(--el-between);
 `;
 
 const AccountMethod = styled.div`
@@ -95,12 +106,11 @@ const AccountMethod = styled.div`
 const CopyButton = styled.button`
   border: none;
   border-radius: 5px;
-  padding: 0.1em 0.2em;
+  padding-top: 0.2em;
   cursor: pointer;
-  gap: 2px;
   outline: none;
   box-shadow: none;
-  background: white;
+  background: var(--color-white2); 
 `;
 
 const AccountButton = styled.button`
@@ -108,8 +118,7 @@ const AccountButton = styled.button`
   align-items: center;
   justify-content: center;
   border-radius: 5px;
-  margin: 5px 0;
-  padding: 0 0.8em;
+  padding-left: var(--el-between);
   width: auto;
   cursor: pointer;
   gap: 2px;
@@ -117,15 +126,15 @@ const AccountButton = styled.button`
   text-decoration: none;
   outline: none;
   box-shadow: none;
-  background: white;
 `.withComponent('a');
 
 const KakaopayImg = styled.img`
-  width: 50px;
+  background: var(--color-white2); 
 `;
 
 const TossImg = styled.img`
   width: 70px;
+  background: var(--color-white2); 
 `;
 
 

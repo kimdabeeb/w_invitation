@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import Copy from '@/assets/icons/copy.svg?react';
+import weddingVideo from '@/assets/video/weddingVideo.mp4'
 import { CustomEn, SubTitle } from '@/components/ContentsFont';
 import ShareKakaoBtn from '@/utils/ShareKakaoBtn';
 
@@ -16,14 +17,17 @@ const ShareBox = () => {
   };
   return (
     <>
-      <div
+      <video muted autoPlay loop width={450}>
+        <source src={weddingVideo} type="video/mp4" />
+      </video> 
+      {/* <div
         data-aos="fade"
         data-aos-delay="400"
         style={{
           width: '100%',
           aspectRatio: '1/1.75',
           background: '#afc8d4',
-        }}></div>
+        }}></div> */}
       <SnsCont>
         <ShareKakaoBtn />
         <CopyButton type="button" onClick={handleCopy}>

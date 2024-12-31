@@ -60,11 +60,18 @@
       "host": "신부측",
       "accountInfo": [
         {
-          "name": "김용대  이  선",
-          "relation": "신부 부모님",
+          "name": "김용대",
+          "relation": "신부 아버지",
+          "bank": "국민",
+          "account": "078501-04-311559"
+        },
+        {
+          "name": "이  선",
+          "relation": "신부 어머니",
           "bank": "신한",
           "account": "110-363-396590"
         },
+
         {
           "name": "김다빈",
           "relation": "신부",

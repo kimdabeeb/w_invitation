@@ -1,5 +1,6 @@
 import moment from 'moment';
 import Calendar from 'react-calendar';
+import Dday from './Dday';
 import data from '../../data.json';
 import { CustomEn, Title } from '@/components/ContentsFont';
 import { TitleCont, Wrap } from '@/components/ContentsWrap';
@@ -12,15 +13,15 @@ const CalendarWrap = () => {
 
   return (
     <Wrap style={{ marginBottom: '2.5rem' }}>
-      <CustomEn data-aos="fade-up" data-aos-duration="1800">
+      <CustomEn data-aos="fade-up">
         WEDDING DAY
       </CustomEn>
-      <TitleCont data-aos="fade-up" data-aos-duration="1800">
+      <TitleCont data-aos="fade-up">
         <Title>{greeting.eventDay}</Title>
         <Title>Saturday, March 1, 2025 | PM 15:40 </Title>
-        <hr style={{ borderTop: '1px solid #e5e7eb', margin: '3rem auto 0' }} />
+        {/* <hr style={{ borderTop: '1px solid #e5e7eb', margin: '3rem auto 0' }} /> */}
       </TitleCont>
-      <div data-aos="fade-up" data-aos-duration="2000">
+      <div data-aos="fade-up">
         <Calendar
           formatDay={(locale = 'ko', date) => moment(date).locale(locale).format('D')}
           selectRange={false}
@@ -38,12 +39,13 @@ const CalendarWrap = () => {
         />
       </div>
       <style>{`
-      .react-calendar * {font-family: GowunBatang; text-decoration: unset!important;}
+      .react-calendar * {width: 100%!important; font-family: 'GowunDodum'; text-decoration: unset!important;}
       .react-calendar,.react-calendar__navigation button:disabled {background: #fff!important; border: none;}
-      .react-calendar__navigation {margin-bottom: 1.5rem;}
+      .react-calendar__navigation {display: none;}
       .react-calendar__navigation__label__labelText { font-size: 1.1rem; color:#171717;}
       .react-calendar__title { font-size: .95rem; padding-top: 12px; padding-bottom:12px; color:#171717!important; }
       .react-calendar__tile--active { cursor: none; background: unset!important; }
+      .react-calendar__month-view {border-top: 1px solid #eee; border-bottom: 1px solid #eee; padding: 2rem 0; margin-bottom: 2rem;}
       .react-calendar__month-view__days__day--weekend.highlight {color: #fff!important; font-weight: bold;}
       .react-calendar__tile.react-calendar__month-view__days__day {color:#171717!important;}
       .react-calendar__tile.react-calendar__month-view__days__day--weekend {color: #d10000!important;}
@@ -59,6 +61,7 @@ const CalendarWrap = () => {
       .react-calendar__navigation button:enabled:focus {background-color: unset!important; background: unset!important; cursor: none; pointer-events: none;}
     }
     `}</style>
+    <Dday data-aos="fade-up" />
     </Wrap>
   );
 };

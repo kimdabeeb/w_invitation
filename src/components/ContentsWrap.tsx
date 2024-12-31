@@ -39,7 +39,6 @@ export const GalleryWrap = styled.div`
 `;
 
 export const TitleCont = styled.div`
-  height: 100%;
   padding: calc(var(--el-between) * 3) 0 calc(var(--el-between) * 6);
 `;
 

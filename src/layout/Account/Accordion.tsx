@@ -18,7 +18,7 @@ const Accordion = ({ title, children }: IAccordionProps) => {
       <AccordionTitle isActive={isOpen} onClick={toggleAccordion}>
         <p>{title}에게</p>
         <span>
-          <ExpandMore fill="#a5a5a5" />
+          <ExpandMore />
         </span>
       </AccordionTitle>
       {isOpen && <AccordionBox>{children}</AccordionBox>}
@@ -29,7 +29,8 @@ const Accordion = ({ title, children }: IAccordionProps) => {
 export default Accordion;
 
 const AccordionCont = styled.div`
-  height: 100%;
+  display: var(--el-flex);
+  flex-direction: var(--el-column);
   margin-bottom: calc(var(--el-between) * 2);
 `;
 
@@ -41,35 +42,32 @@ const AccordionTitle = styled.div<{ isActive: boolean }>`
   background-color: var(--color-white);
   border-radius: var(--el-between);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
-  transition: all 0.3s ease-in-out;
   font-size: var(--font-size);
   cursor: pointer;
   & > p {
     color: #4c4c4c;
     font-size: .85rem;
   }
-  & span {
+  & > span {
     align-self: baseline;
     display: contents;
     cursor: pointer;
     user-select: none;
     transition: all 0.3s ease-in-out;
     transform: ${(props) => (props.isActive ? 'rotate(180deg)' : undefined)};
-  }
+    }
 `;
 
 const AccordionBox = styled.div`
   font-size: 0.8125rem;
   text-align: justify;
-  padding: calc(var(--el-between) * 2.5);
-  background-color: var(--color-white);
+  padding: calc(var(--el-between) * 2) calc(var(--el-between) / .65);
+  background-color: var(--bg-main);
   border-radius: 0 0 var(--el-between) var(--el-between);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
   position: relative;
   top: -5px;
-  > div:nth-of-type(2) {
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 14px;
-    margin-bottom: 16px;
+  div:last-of-type {
+    margin-bottom: 0;
   }
 `;
