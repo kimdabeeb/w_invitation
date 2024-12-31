@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import Copy from '@/assets/icons/copy.svg?react';
 import weddingVideo from '@/assets/video/weddingVideo.mp4'
 import { CustomEn, SubTitle } from '@/components/ContentsFont';
-import ShareKakaoBtn from '@/utils/ShareKakaoBtn';
+// import ShareKakaoBtn from '@/utils/ShareKakaoBtn';
 
 const ShareBox = () => {
   const handleCopy = () => {
@@ -20,16 +20,8 @@ const ShareBox = () => {
       <video muted autoPlay loop>
         <source src={weddingVideo} type="video/mp4" />
       </video> 
-      {/* <div
-        data-aos="fade"
-        data-aos-delay="400"
-        style={{
-          width: '100%',
-          aspectRatio: '1/1.75',
-          background: '#afc8d4',
-        }}></div> */}
       <SnsCont>
-        <ShareKakaoBtn />
+        {/* <ShareKakaoBtn /> */}
         <CopyButton type="button" onClick={handleCopy}>
           <SubTitle>청첩장 주소 복사하기</SubTitle>
           <Copy fill="#000" />
