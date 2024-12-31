@@ -60,8 +60,8 @@ export interface ILocationInfo {
   desc: string;
 }
 
-declare global {
-  interface Window {
-    Kakao: any;
-  }
-}
+// declare global {
+//   interface Window {
+//     Kakao: any;
+//   }
+// }
