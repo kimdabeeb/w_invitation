@@ -11,7 +11,7 @@ import SendMessage from '@/layout/Contact/SendMessage';
 import FloatingBar from '@/layout/FloatingBar/FloatingBar.tsx';
 import PhotoGallery from '@/layout/Gallery/PhotoGallery';
 import Intro from '@/layout/Invitation/Intro';
-//import ShareBox from '@/layout/Invitation/ShareBox';
+import ShareBox from '@/layout/Invitation/ShareBox';
 import Location from '@/layout/Location/Location';
 
 function App() {
@@ -65,7 +65,7 @@ function App() {
           <Location /> 
           <Account />
           <SendMessage />
-          {/* <ShareBox /> */}
+          <ShareBox /> 
           <FloatingBar isVisible={isVisible} />
         </Wrapper>
       </Container>
