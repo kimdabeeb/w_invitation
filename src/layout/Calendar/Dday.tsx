@@ -3,8 +3,10 @@ import styled from '@emotion/styled';
 
 const Dday = () => {
 
-    const countdownday = new Date('2025-3-1 15:40:00').getTime() 
-    const [Calculatedate,setCalculatedate] = useState(countdownday - new Date().getTime());  //가져온 시간 - 현재 시간
+  // const date = new Date('2025-03-01 15:40:00').getTime();
+  const date = '2025-03-01 15:40:00'
+  const countdownday = new Date(date).getTime();
+  const [Calculatedate,setCalculatedate] = useState(countdownday - new Date().getTime());  //가져온 시간 - 현재 시간
 
     useEffect(() => {
         setInterval(() => {
@@ -17,7 +19,7 @@ const Dday = () => {
     const sec = Math.floor((Calculatedate / 1000 % 60));
 
     return (
-        <Day>
+        <Day data-aos="fade-up" data-aos-duration="1300">
           <ul>
             <li>
               <Number>{day}</Number>

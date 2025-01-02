@@ -9,23 +9,17 @@ const Account = () => {
   return (
     <AccountWrap>
         <hr data-aos="fade-up" />
-        <div>
           <Title
             data-aos="fade-up"
-            data-aos-delay="0"
-            data-aos-offset="0"
             style={{ fontWeight: 'bold' }}>
             마음 전하실 곳
           </Title>
           <Title
             data-aos="fade-up"
-            data-aos-offset="150"
-            data-aos-delay="500"
             style={{ fontSize: '0.8125rem', marginTop: '.5rem' }}>
             참석이 어려우신 분들을 위해 기재하였습니다 <br />
             너그러운 마음으로 양해부탁드립니다
           </Title>
-        </div>
       {hostInfo.map((host) => {
         return (
             <Accordion title={host.host} key={host.host}>
@@ -56,13 +50,13 @@ const AccountWrap = styled.div`
   display: var(--el-flex);
   flex-direction: var(--el-column);
   background: var(--color-white2);
-  padding: calc(var(--el-between) * 7) calc(var(--el-between) * 2.5);
+  padding: calc(var(--el-between) * 7) calc(var(--el-between) * 6.5);
   hr {
     width: 2.25rem;
     background: var(--color-white2);
     margin: calc(var(--el-between) * 4) auto;
   }
   > div:nth-of-type(1) {
-    margin: calc(var(--el-between) * 4) auto calc(var(--el-between) * 5);
+    margin: calc(var(--el-between) * 4) auto calc(var(--el-between) * 2);
   } 
 `;

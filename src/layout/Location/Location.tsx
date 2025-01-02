@@ -10,14 +10,14 @@ const Location = () => {
   return (
     <div style={{ background: 'var(--bg-sub)' }}>
       <Wrap style={{ paddingBottom: '0' }}>
-        <CustomEn>Location</CustomEn>
-        <TitleCont>
+        <CustomEn data-aos="fade-up">Location</CustomEn>
+        <TitleCont data-aos="fade-up">
           <Title style={{ fontWeight: '600' }}>{mapInfo.address1}</Title>
           <Title style={{ fontSize: '.85rem' }}>{mapInfo.address2}</Title>
         </TitleCont>
       </Wrap>
       <Map />
-      <Wrap style={{ paddingTop: '0' }}>
+      <Wrap style={{ paddingTop: '0', paddingBottom: 'calc(var(--el-between) * 6)' }}>
         <MapButtons />
         <Address />
       </Wrap>

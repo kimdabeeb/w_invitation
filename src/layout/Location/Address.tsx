@@ -6,8 +6,8 @@ import Subway from '@/assets/icons/subway.svg?react';
 
 const Address = () => {
   return (
-    <div data-aos="fade">
-      <Way>
+    <>
+      <Way data-aos="fade-up" data-aos-delay="0">
         <li>
           <p>
             <Car />
@@ -18,9 +18,9 @@ const Address = () => {
             서울시 영등포구 국제금융로6길 26
           </p>
         </li>
+        <hr />
       </Way>
-      <hr />
-      <Way>
+      <Way data-aos="fade-up" data-aos-delay="50">
         <li>
           <p>
             <Bus />
@@ -45,9 +45,9 @@ const Address = () => {
             </li>
           </ul>
         </li>
+        <hr />
       </Way>
-      <hr />
-      <Way>
+      <Way data-aos="fade-up" data-aos-delay="100">
         <li>
           <p>
             <Subway />
@@ -58,9 +58,9 @@ const Address = () => {
             여의도역 5번 출구 (도보 3분)
           </p>
         </li>
+        <hr />
       </Way>
-      <hr />
-      <Way>
+      <Way data-aos="fade-up" data-aos-delay="120">
         <li>
           <p>
             <Parking />
@@ -75,7 +75,7 @@ const Address = () => {
           </p>
         </li>
       </Way>
-    </div>
+    </>
   );
 };
 

@@ -6,7 +6,7 @@ const Map = () => {
   const navermaps = useNavermaps();
 
   return (
-      <MapDiv
+      <MapDiv data-aos="fade-up" data-aos-delay="150"
         style={{
           width: '100%',
           height: '240px',

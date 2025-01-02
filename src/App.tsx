@@ -11,9 +11,8 @@ import SendMessage from '@/layout/Contact/SendMessage';
 import FloatingBar from '@/layout/FloatingBar/FloatingBar.tsx';
 import PhotoGallery from '@/layout/Gallery/PhotoGallery';
 import Intro from '@/layout/Invitation/Intro';
-//import ShareBox from '@/layout/Invitation/ShareBox';
+import ShareBox from '@/layout/Invitation/ShareBox';
 import Location from '@/layout/Location/Location';
-
 
 function App() {
   const ncpClientId = import.meta.env.VITE_APP_NAVERMAPS_CLIENT_ID;
@@ -23,8 +22,8 @@ function App() {
   useEffect(() => {
     AOS.init({
       offset: 20, // pixel
-      delay: 350,
-      duration: 1000,
+      delay: 200,
+      duration: 1200,
       easing: 'ease-in-out',
       once: true,
     });
@@ -66,7 +65,7 @@ function App() {
           <Location /> 
           <Account />
           <SendMessage />
-          {/* <ShareBox /> */}
+          <ShareBox />
           <FloatingBar isVisible={isVisible} />
         </Wrapper>
       </Container>

@@ -18,9 +18,6 @@ const Intro = () => {
     <>
       <Wrap style={{ padding: 'calc(var(--el-between) * 3) calc(var(--el-between) * 3) 0' }}>
         <Main>
-          {/* <video muted autoPlay loop width={450}>
-            <source src={weddingVideo} type="video/mp4" />
-          </video> */}
           <MainImg data-aos="fade" src={mainImg} />
           <Paragraph3>love<br/>one<br/>another</Paragraph3>
           <Bubble>
@@ -34,30 +31,30 @@ const Intro = () => {
           </Bubble>
         </Main>
         <Invitation data-aos="fade">
-          <li data-aos="fade">
+          <li data-aos="fade" data-aos-delay="100">
             우리가 사랑함은 그가 먼저 우리를 사랑하셨음이라
             <br />
-            <span data-aos="fade">
+            <span>
               요한일서 4:19
             </span>
           </li>
-          <li data-aos="fade" >
+          <li data-aos="fade" data-aos-delay="200">
             하나님의 때에 서로 만난 두 사람이
           </li>
-          <li data-aos="fade">
+          <li data-aos="fade" data-aos-delay="300">
             은혜로 결실을 맺게 되었습니다.
           </li>
-          <li data-aos="fade">
+          <li data-aos="fade" data-aos-delay="400">
             둘이 하나가 되어 평생 서로를 돕는 배필로
           </li>
-          <li data-aos="fade">
+          <li data-aos="fade" data-aos-delay="500">
             서약하는 자리에 기도와 축복으로 함께 해주신다면
           </li>
-          <li data-aos="fade">
+          <li data-aos="fade" data-aos-delay="600">
             더 없는 감사와 기쁨으로 간직하겠습니다.
           </li>
         </Invitation>
-        <HostInfo data-aos="fade" data-aos-offset="150">
+        <HostInfo data-aos="fade" data-aos-offset="250">
           <p>groom</p>
           <Host person={groom} />
           <span>&</span>
@@ -65,7 +62,7 @@ const Intro = () => {
           <Host person={bride} />
         </HostInfo>
       </Wrap>
-      <SubImg data-aos="fade" src={subImg} />
+      <SubImg data-aos="fade" data-aos-offset="250" src={subImg} />
     </>
   );
 };
@@ -161,37 +158,37 @@ const Bubble = styled.div`
   .bubble:nth-of-type(1) {
     top: 20%;
     left: 20%;
-    animation-duration: 8s;
+    animation-delay: 8s;
   }
   .bubble:nth-of-type(2) {
     top: 60%;
     left: 80%;
-    animation-duration: 10s;
+    animation-delay: 10s;
   }
   .bubble:nth-of-type(3) {
     top: 40%;
     left: 40%;
-    animation-duration: 3s;
+    animation-delay: 3s;
   }
   .bubble:nth-of-type(4) {
     top: 66%;
     left: 30%;
-    animation-duration: 7s;
+    animation-delay: 7s;
   }
   .bubble:nth-of-type(5) {
     top: 90%;
     left: 10%;
-    animation-duration: 9s;
+    animation-delay: 9s;
   }
   .bubble:nth-of-type(6) {
     top: 50%;
   left: 50%;
-    animation-duration: 5s;
+    animation-delay: 5s;
   }
   .bubble:nth-of-type(7) {
     top: 75%;
     left: 60%;
-    animation-duration: 8s;
+    animation-delay: 8s;
   }
   @keyframes animate {
     0% {
