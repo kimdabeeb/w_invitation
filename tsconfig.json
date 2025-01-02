@@ -5,7 +5,7 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
-
+    "strictPropertyInitialization": false,
     "baseUrl": "./src",
     "paths": {
       "@/components/*": ["./components/*"],
@@ -18,7 +18,7 @@
     },
 
     /* AOS */
-    "typeRoots": ["node_modules/@types"],
+    "typeRoots": ["node_modules/@types", "videos"],
     "types": ["aos"],
     
     /* Bundler mode */
@@ -36,6 +36,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"],
+  "include": ["src", "src/vite.env.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

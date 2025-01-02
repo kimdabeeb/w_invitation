@@ -70,6 +70,7 @@ module.exports = {
           "caseInsensitive": true
         }
       }
-    ]
+    ],
+    "@typescript-eslint/no-explicit-any": "off",
   }
 }
