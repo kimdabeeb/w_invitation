@@ -54,13 +54,13 @@ const PhotoGallery = () => {
                 <SwiperSlide key={index}>
                   {/* <Item original={image.source} thumbnail={image.source} width="1920" height="1280"> */}
                   <Item original={image.source} thumbnail={image.source} width="1920" height="1280">
-                    {({ ref, open }) => (
+                    {({ ref }) => (
                       <img
                         style={smallItemStyles}
                         alt={image.alt}
                         src={image.source}
                         ref={ref as React.MutableRefObject<HTMLImageElement>}
-                        onClick={open}
+                        // onClick={() => handleItemClick(open)}
                       />
                     )}
                   </Item>
