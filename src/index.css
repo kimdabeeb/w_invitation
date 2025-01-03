@@ -43,6 +43,8 @@ ul {
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overscroll-behavior: none;
+  overscroll-behavior-y: none;
 }
 
 div, section {
@@ -69,6 +71,11 @@ ul {
   list-style: none;
 }
 
+html {
+  -ms-content-zooming: none;
+  -ms-touch-action: pan-x pan-y;
+}
+
 body {
   font-family: 'GowunBatang', 'SUIT', serif;
   line-height: 1.8;
@@ -90,11 +97,12 @@ body {
   justify-content: var(--el-center);
   color: rgba(85, 85, 85, 85);
   background: var(--color-white);
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 #root {
   background: var(--bg-sub2);
+  touch-action: pan-y;
 }
 
 :root {

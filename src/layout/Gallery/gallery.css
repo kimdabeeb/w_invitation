@@ -3,8 +3,17 @@
   display: none !important;
 }
 
+.pswp--zoom-allowed .pswp__img {
+  cursor: default !important
+} 
+
+.pswp__img {
+  pointer-events: none;
+}
+
 .pswp__top-bar.pswp__hide-on-close {
   .pswp__preloader {display: none !important;}
+
   .pswp__button.pswp__button--close {
     width: 26px;
     height: 26px;
@@ -12,9 +21,8 @@
     left: 0px;
     margin-right: 10px;
     background: url('../../assets/icons/close.svg')no-repeat center/contain;
-    .pswp__icn {display: none !important;}
-  }
-
+      .pswp__icn {display: none !important;}
+    }
 }
 
 .swiper-slide {
@@ -58,8 +66,8 @@
 }
 
 .pswp--click-to-zoom.pswp--zoom-allowed .pswp__img {
-  height: auto!important;
-  /* width: auto!important; */
+  /* height: auto!important;
   top: 50%!important;
-  transform: translateY(-25%)!important;
+  transform: translateY(-25%)!important; */
+  object-fit: contain;
 }

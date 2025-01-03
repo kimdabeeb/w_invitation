@@ -15,13 +15,13 @@ const PhotoGallery = () => {
     arrowPrev: false,
     arrowNext: false,
     zoom: false,
-    close: false,
+    maxSpreadZoom: 1,
+    allowUserZoom: false
   }
 
   const smallItemStyles: React.CSSProperties = {
-    cursor: 'pointer',
-    objectFit: 'cover',
-    zoom: 'false',
+    cursor: 'none',
+    objectFit: 'contain',
     width: '100%',
     maxHeight: '100%',
     // height: '150px',
