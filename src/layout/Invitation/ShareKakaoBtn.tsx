@@ -25,15 +25,15 @@ const ShareKakaoBtn = () => {
             mobileWebUrl: 'https://w-invitation-yjdb.vercel.app/',
           },
         },
-        // buttons: [
-        //   {
-        //     title: '청첩장 보러가기',
-        //     link: {
-        //       webUrl: 'https://w-invitation-yjdb.vercel.app/',
-        //       mobileWebUrl: 'https://w-invitation-yjdb.vercel.app/',
-        //     },
-        //   },
-        // ],
+        buttons: [
+          {
+            title: '청첩장 보러가기',
+            link: {
+              webUrl: 'https://w-invitation-yjdb.vercel.app/',
+              mobileWebUrl: 'https://w-invitation-yjdb.vercel.app/',
+            },
+          },
+        ],
       });
     // }
   };
