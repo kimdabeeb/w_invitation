@@ -10,6 +10,7 @@ const ShareKakaoBtn = () => {
       //인증이 안되어있는 경우 인증요청
       if (!kakao.isInitialized()) {
         const JAVASCRIPT_ID = import.meta.env.VITE_APP_KAKAOCOPY_CLIENT_ID;
+        kakao.cleanup(JAVASCRIPT_ID)
         kakao.init(JAVASCRIPT_ID);
       }
 
