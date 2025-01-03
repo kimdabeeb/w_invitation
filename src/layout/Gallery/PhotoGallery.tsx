@@ -11,9 +11,17 @@ import images from '@/layout/Gallery/Images.ts';
 import '@/layout/Gallery/gallery.css';
 
 const PhotoGallery = () => {
+  const options = {
+    arrowPrev: false,
+    arrowNext: false,
+    zoom: false,
+    close: false,
+  }
+
   const smallItemStyles: React.CSSProperties = {
     cursor: 'pointer',
     objectFit: 'cover',
+    zoom: 'false',
     width: '100%',
     maxHeight: '100%',
     // height: '150px',
@@ -28,7 +36,7 @@ const PhotoGallery = () => {
         </TitleCont>
       </div>
       <Wrap data-aos="fade-up" style={{ padding: '0 0 3rem 0' }}>
-        <Gallery>
+        <Gallery options={options}>
           <Swiper
             modules={[Navigation, Pagination]}
             style={{ overflow: 'visible' }}

@@ -38,7 +38,7 @@ const Dday = () => {
               <Text>seconds</Text>
             </li>
           </ul>
-          <p>영준 ♥︎ 다빈 결혼식이 <span>{day}일</span> 남았습니다</p>
+          <p>영준 ♥︎ 다빈이의 결혼식이  <span>{day}일</span> 남았습니다.</p>
         </Day>
     );
 };

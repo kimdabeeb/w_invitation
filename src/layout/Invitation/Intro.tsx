@@ -2,7 +2,6 @@ import styled from '@emotion/styled';
 import data from '../../data.json';
 import mainImg from '@/assets/images/img_13.jpeg?url';
 import subImg from '@/assets/images/img_14.webp?url';
-//import weddingVideo from '@/assets/video/weddingVideo.mp4'
 import { Paragraph3 } from '@/components/ContentsFont';
 import { Wrap } from '@/components/ContentsWrap';
 import { BrideAndGroom } from '@/types/data.ts';
@@ -155,47 +154,4 @@ const Bubble = styled.div`
     position: absolute;
     animation: animate 10s linear infinite;
   }
-  .bubble:nth-of-type(1) {
-    top: 20%;
-    left: 20%;
-    animation-delay: 8s;
-  }
-  .bubble:nth-of-type(2) {
-    top: 60%;
-    left: 80%;
-    animation-delay: 10s;
-  }
-  .bubble:nth-of-type(3) {
-    top: 40%;
-    left: 40%;
-    animation-delay: 3s;
-  }
-  .bubble:nth-of-type(4) {
-    top: 66%;
-    left: 30%;
-    animation-delay: 7s;
-  }
-  .bubble:nth-of-type(5) {
-    top: 90%;
-    left: 10%;
-    animation-delay: 9s;
-  }
-  .bubble:nth-of-type(6) {
-    top: 50%;
-  left: 50%;
-    animation-delay: 5s;
-  }
-  .bubble:nth-of-type(7) {
-    top: 75%;
-    left: 60%;
-    animation-delay: 8s;
-  }
-  @keyframes animate {
-    0% {
-      transform: scale(0) translateY(0) rotate(70deg);
-    }
-    100% {
-      transform: scale(1.1) translateY(-50px) rotate(360deg);
-    }
-}
 `

@@ -19,7 +19,6 @@ const CalendarWrap = () => {
       <TitleCont data-aos="fade-up">
         <Title>{greeting.eventDay}</Title>
         <Title>Saturday, March 1, 2025 | PM 15:40 </Title>
-        {/* <hr style={{ borderTop: '1px solid #e5e7eb', margin: '3rem auto 0' }} /> */}
       </TitleCont>
       <div data-aos="fade-up">
         <Calendar
@@ -53,7 +52,7 @@ const CalendarWrap = () => {
       .react-calendar__month-view__weekdays {margin-bottom:.6rem;}
       .react-calendar__navigation {}
 
-      ..react-calendar__viewContainer,
+      .react-calendar__viewContainer,
       .react-calendar__tile--active,
       .react-calendar__tile--active:enabled:hover,
       .react-calendar__navigation button:disabled,
