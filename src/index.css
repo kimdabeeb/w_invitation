@@ -73,7 +73,6 @@ ul {
 
 html {
   -ms-content-zooming: none;
-  -ms-touch-action: pan-x pan-y;
 }
 
 body {
@@ -97,7 +96,7 @@ body {
   justify-content: var(--el-center);
   color: rgba(85, 85, 85, 85);
   background: var(--color-white);
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 #root {
