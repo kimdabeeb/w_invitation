@@ -7,7 +7,8 @@ interface ImportMeta {
 declare global {
   interface Window {
     navermaps: typeof import('navermaps');
-  }
+    Cypress: unknown;
+    }
 }
 
 interface Window {
