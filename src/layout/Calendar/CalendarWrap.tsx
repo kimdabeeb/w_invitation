@@ -48,7 +48,7 @@ const CalendarWrap = () => {
       .react-calendar__month-view__days__day--weekend.highlight {color: #fff!important; font-weight: bold;}
       .react-calendar__tile.react-calendar__month-view__days__day {color:#171717!important;}
       .react-calendar__tile.react-calendar__month-view__days__day--weekend {color: #d10000!important;}
-      .react-calendar__tile.react-calendar__month-view__days__day--weekend.highlight { background: #cfe3ec!important; color: #ffffff!important; border-radius: 50%; font-size:1rem; aspect-ratio: 1 / .95; position: relative; top: -2px;}
+      .react-calendar__tile.react-calendar__month-view__days__day--weekend.highlight { background: #cfe3ec!important; border-radius: 50%; font-size: .9rem; aspect-ratio: 1 / .95; position: relative; top: -2px;}
       .react-calendar__month-view__weekdays {margin-bottom:.6rem;}
       .react-calendar__navigation {}
 

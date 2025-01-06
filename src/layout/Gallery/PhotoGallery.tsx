@@ -5,7 +5,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'photoswipe/style.css';
-import { CustomEn, Title } from '@/components/ContentsFont';
+import { CustomEn } from '@/components/ContentsFont';
 import { TitleCont, Wrap } from '@/components/ContentsWrap';
 import images from '@/layout/Gallery/Images.ts';
 import '@/layout/Gallery/gallery.css';
@@ -16,7 +16,7 @@ const PhotoGallery = () => {
     arrowNext: false,
     zoom: false,
     maxSpreadZoom: 1,
-    allowUserZoom: false
+    allowUserZoom: false,
   }
 
   const smallItemStyles: React.CSSProperties = {
@@ -24,16 +24,16 @@ const PhotoGallery = () => {
     objectFit: 'contain',
     width: '100%',
     maxHeight: '100%',
-    // height: '150px',
   };
 
   return (
     <Wrap style={{ paddingLeft: '0', paddingRight: '0'}}>
       <div data-aos="fade-up">
         <CustomEn>Gallery</CustomEn>
-        <TitleCont>
+        <TitleCont style={{ paddingBottom: 'calc(var(--el-between)* 2)'}}></TitleCont>
+        {/* <TitleCont>
           <Title style={{fontSize:'.825rem'}}>사진을 클릭하시면 전체 화면 보기가 가능합니다</Title>
-        </TitleCont>
+        </TitleCont> */}
       </div>
       <Wrap data-aos="fade-up" style={{ padding: '0 0 3rem 0' }}>
         <Gallery options={options}>

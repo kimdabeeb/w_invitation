@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import data from '../../data.json';
-import mainImg from '@/assets/images/img_13.jpeg?url';
-import subImg from '@/assets/images/img_14.webp?url';
+import mainImg from '@/assets/images/img_1.jpg?url';
+import subImg from '@/assets/images/img_12.jpg?url';
 import { Paragraph3 } from '@/components/ContentsFont';
 import { Wrap } from '@/components/ContentsWrap';
 import { BrideAndGroom } from '@/types/data.ts';
@@ -15,7 +15,7 @@ const Intro = () => {
 
   return (
     <>
-      <Wrap style={{ padding: 'calc(var(--el-between) * 3) calc(var(--el-between) * 3) 0' }}>
+      <Wrap style={{ padding: 'calc(var(--el-between) * 3) calc(var(--el-between) * 2.5) 0' }}>
         <Main>
           <MainImg data-aos="fade" src={mainImg} />
           <Paragraph3>love<br/>one<br/>another</Paragraph3>
@@ -89,13 +89,13 @@ const Main = styled.div`
   left: 0;
     p {
       position: absolute;
-      top: -20px;
+      top: -10px; 
       width: 100%;
       text-align: center;
       text-transform: capitalize;
-      line-height: 1.55;
+      line-height: 1.5;
       letter-spacing: 2px;
-      font-size: 4rem;
+      font-size: 2.6rem;
       color: #a9d4ff;
     }
 `;

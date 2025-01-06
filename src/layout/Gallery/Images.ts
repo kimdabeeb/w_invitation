@@ -1,25 +1,30 @@
-import image01 from '@/assets/images/img_1.webp'
-import image10 from '@/assets/images/img_10.webp'
-import image11 from '@/assets/images/img_11.webp'
-import image12 from '@/assets/images/img_12.webp'
-import image13 from '@/assets/images/img_13.jpeg'
-import image14 from '@/assets/images/img_14.webp'
-import image02 from '@/assets/images/img_2.webp'
-import image03 from '@/assets/images/img_3.webp'
-import image04 from '@/assets/images/img_4.webp'
-import image05 from '@/assets/images/img_5.webp'
-import image06 from '@/assets/images/img_6.webp'
-import image07 from '@/assets/images/img_7.webp'
-import image08 from '@/assets/images/img_8.webp'
-import image09 from '@/assets/images/img_9.webp'
+import image03 from '@/assets/images/img_3.jpg'
+//import image05 from '@/assets/images/img_5.jpg'
+import image06 from '@/assets/images/img_6.jpg'
+import image07 from '@/assets/images/img_7.jpg'
+//import image08 from '@/assets/images/img_8.jpg'
+import image09 from '@/assets/images/img_9.jpg'
+import image10 from '@/assets/images/img_10.jpg'
+import image11 from '@/assets/images/img_11.jpg'
+//import image12 from '@/assets/images/img_12.jpg'
+import image13 from '@/assets/images/img_13.jpg'
+//import image14 from '@/assets/images/img_14.jpg'
+import image15 from '@/assets/images/img_15.jpg'
+import image16 from '@/assets/images/img_16.jpg'
+import image17 from '@/assets/images/img_17.jpg'
+// import image18 from '@/assets/images/img_18.jpg'
+import image19 from '@/assets/images/img_19.jpg'
+import image02 from '@/assets/images/img_2.jpg'
+import image20 from '@/assets/images/img_20.jpg'
+import image21 from '@/assets/images/img_21.jpg'
+import image22 from '@/assets/images/img_22.jpg'
+import image23 from '@/assets/images/img_23.jpg'
+import image24 from '@/assets/images/img_24.jpg'
+import image25 from '@/assets/images/img_25.jpg'
+import image26 from '@/assets/images/img_26.jpg'
+import image04 from '@/assets/images/img_4.jpg'
 
 const images = [   /* 이미지 경로를 리스트로 저장 */
-  {
-    alt: 'image01',
-    source: image01,
-    width: 640,
-    height: 960
-  },
   {
     alt: 'image02',
     source: image02,
@@ -30,18 +35,19 @@ const images = [   /* 이미지 경로를 리스트로 저장 */
     alt: 'image03',
     source: image03,
     width: 640,
-    height: 960
   },{
     alt: 'image04',
     source: image04,
     width: 640,
     height: 960
-  },{
-    alt: 'image05',
-    source: image05,
-    width: 640,
-    height: 960
-  },{
+  },
+  // {
+  //   alt: 'image05',
+  //   source: image05,
+  //   width: 640,
+  //   height: 960
+  // },
+  {
     alt: 'image06',
     source: image06,
     width: 640,
@@ -51,12 +57,14 @@ const images = [   /* 이미지 경로를 리스트로 저장 */
     source: image07,
     width: 640,
     height: 960
-  },{
-    alt: 'image08',
-    source: image08,
-    width: 640,
-    height: 960
-  },{
+  },
+  // {
+  //   alt: 'image08',
+  //   source: image08,
+  //   width: 640,
+  //   height: 960
+  // },
+  {
     alt: 'image09',
     source: image09,
     width: 640,
@@ -71,18 +79,94 @@ const images = [   /* 이미지 경로를 리스트로 저장 */
     source: image11,
     width: 640,
     height: 960
-  },{
-    alt: 'image12',
-    source: image12,
-    width: 640,
-    height: 960
-  },{
+  },
+  // {
+  //   alt: 'image12',
+  //   source: image12,
+  //   width: 640,
+  //   height: 960
+  // },
+  {
     alt: 'image13',
     source: image13,
-  },{
-    alt: 'image14',
-    source: image14,
-  }
+    width: 640,
+    height: 960
+  },
+  // {
+  //   alt: 'image14',
+  //   source: image14,
+  //   width: 640,
+  //   height: 960
+  // },
+  {
+    alt: 'image15',
+    source: image15,
+    width: 640,
+    height: 960
+  },
+  {
+    alt: 'image16',
+    source: image16,
+    width: 640,
+    height: 960
+  },
+  {
+    alt: 'image17',
+    source: image17,
+    width: 640,
+  },
+  // {
+  //   alt: 'image18',
+  //   source: image18,
+  //   width: 640,
+  // },
+  {
+    alt: 'image19',
+    source: image19,
+    width: 640,
+    height: 960
+  },
+  {
+    alt: 'image20',
+    source: image20,
+    width: 640,
+  },
+  {
+    alt: 'image21',
+    source: image21,
+    width: 640,
+    height: 960
+  },
+  {
+    alt: 'image22',
+    source: image22,
+    width: 640,
+    height: 960
+  },
+  {
+    alt: 'image23',
+    source: image23,
+    width: 640,
+    height: 960
+  },
+  {
+    alt: 'image24',
+    source: image24,
+    width: 640,
+    height: 960
+  },
+  {
+    alt: 'image25',
+    source: image25,
+    width: 640,
+    height: 960
+  },
+  {
+    alt: 'image26',
+    source: image26,
+    width: 640,
+    height: 960
+  },
 ];
 
 export default images;
