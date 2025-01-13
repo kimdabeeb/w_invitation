@@ -1,19 +1,34 @@
+import { useEffect } from 'react';
 import styled from '@emotion/styled';
 import UpNarrow from '@/assets/icons/upnarrow.png?url';
 import { SubTitle } from '@/components/ContentsFont';
 
 const ShareKakaoBtn = () => {
+  useEffect(() => {
+    const JAVASCRIPT_ID = import.meta.env.VITE_APP_KAKAOCOPY_CLIENT_ID;
+    console.log('카카오 JavaScript 키:', JAVASCRIPT_ID); 
+
+    if (window.Kakao && !window.Kakao.isInitialized()) {
+      window.Kakao.init(JAVASCRIPT_ID);
+    }
+  }, []);
+
   const kakaoBtn = () => {
     if (window.Kakao) {
       const kakao = window.Kakao;
 
       //인증이 안되어있는 경우 인증요청
+      // if (!kakao.isInitialized()) {
+      //   const JAVASCRIPT_ID = import.meta.env.VITE_APP_KAKAOCOPY_CLIENT_ID;
+      //   kakao.cleanup(JAVASCRIPT_ID)
+      //   kakao.init(JAVASCRIPT_ID);
+      // }
       if (!kakao.isInitialized()) {
-        const JAVASCRIPT_ID = import.meta.env.VITE_APP_KAKAOCOPY_CLIENT_ID;
-        kakao.cleanup(JAVASCRIPT_ID)
-        kakao.init(JAVASCRIPT_ID);
+        console.error('카카오 SDK 초기화가 실패했습니다.');
+        return;
       }
 
+      try {
       kakao.Share.sendDefault({
         objectType: 'feed',
         content: {
@@ -35,7 +50,10 @@ const ShareKakaoBtn = () => {
             },
           },
         ],
-      });
+      })
+      } catch (error) {
+        console.error('카카오 공유 실패:', error);
+      }
     }
   };
 

@@ -17,7 +17,7 @@ const Intro = () => {
     <>
       <Wrap style={{ padding: 'calc(var(--el-between) * 3) calc(var(--el-between) * 2.5) 0' }}>
         <Main>
-          <MainImg data-aos="fade" src={mainImg} />
+          <MainImg src={mainImg} />
           <Paragraph3>love<br/>one<br/>another</Paragraph3>
           <Bubble>
             <div className="bubble"></div>
