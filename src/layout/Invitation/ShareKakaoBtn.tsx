@@ -29,7 +29,7 @@ const ShareKakaoBtn = () => {
       }
 
       try {
-      kakao.Share.sendDefault({
+        window.Kakao.Share.sendDefault({
         objectType: 'feed',
         content: {
           title: '영준 ♥︎ 다빈이의 청첩장',

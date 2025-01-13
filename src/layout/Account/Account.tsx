@@ -50,7 +50,7 @@ const AccountWrap = styled.div`
   display: var(--el-flex);
   flex-direction: var(--el-column);
   background: var(--color-white2);
-  padding: calc(var(--el-between) * 7) calc(var(--el-between) * 6.5);
+  padding: calc(var(--el-between) * 7) calc(var(--el-between) * 4.5);
   hr {
     width: 2.25rem;
     background: var(--color-white2);
