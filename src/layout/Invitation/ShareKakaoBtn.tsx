@@ -7,12 +7,11 @@ const ShareKakaoBtn = () => {
   useEffect(() => {
     window.Kakao.cleanup();
     const JAVASCRIPT_ID = import.meta.env.VITE_APP_KAKAOCOPY_CLIENT_ID;
-    window.Kakao.init(JAVASCRIPT_ID);
-    // console.log('카카오 JavaScript 키:', JAVASCRIPT_ID); 
+    console.log('카카오 JavaScript 키:', JAVASCRIPT_ID); 
 
-    // if (window.Kakao && !window.Kakao.isInitialized()) {
-    //   window.Kakao.init(JAVASCRIPT_ID);
-    // }
+    if (window.Kakao && !window.Kakao.isInitialized()) {
+      window.Kakao.init(JAVASCRIPT_ID);
+    }
   }, []);
 
   const kakaoBtn = () => {
@@ -38,16 +37,16 @@ const ShareKakaoBtn = () => {
           imageUrl:
             'http://k.kakaocdn.net/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
           link: {
-            webUrl: 'https://w-invitation-yjdb.vercel.app/',
-            mobileWebUrl: 'https://w-invitation-yjdb.vercel.app/',
+            webUrl: 'https://w-invitation-yjdb.vercel.app',
+            mobileWebUrl: 'https://w-invitation-yjdb.vercel.app',
           },
         },
         buttons: [
           {
             title: '청첩장 보러가기',
             link: {
-              webUrl: 'https://w-invitation-yjdb.vercel.app/',
-              mobileWebUrl: 'https://w-invitation-yjdb.vercel.app/',
+              webUrl: 'https://w-invitation-yjdb.vercel.app',
+              mobileWebUrl: 'https://w-invitation-yjdb.vercel.app',
             },
           },
         ],
