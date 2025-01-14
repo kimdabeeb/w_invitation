@@ -51,8 +51,7 @@
           "relation": "신랑",
           "bank": "신한",
           "account": "110-334-687612",
-          "kakaopayAccount": "",
-          "tossAccount": ""
+          "kakaopayAccount": ""
         }
       ]
     },
@@ -76,9 +75,7 @@
           "name": "김다빈",
           "relation": "신부",
           "bank": "신한",
-          "account": "110-421-475083",
-          "kakaopayAccount": "https://link.kakaopay.com/_/Q-ULgFw",
-          "tossAccount": ""
+          "account": "110-421-475083"
         }
       ]
     }

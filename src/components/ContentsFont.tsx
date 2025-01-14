@@ -15,7 +15,7 @@ export const Paragraph = styled.p`
 `;
 
 export const Paragraph2 = styled.p`
-  font-family: 'DearJane', sans-serif;
+  font-family: 'RichfordRegular', sans-serif;
 `;
 
 export const Paragraph3 = styled.p`

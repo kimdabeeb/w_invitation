@@ -33,9 +33,8 @@ const ShareKakaoBtn = () => {
         objectType: 'feed',
         content: {
           title: '영준 ♥︎ 다빈이의 청첩장',
-          description: '저희 결혼을 축복해주셔서 감사드립니다 ☻',
-          imageUrl:
-            'http://k.kakaocdn.net/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
+          description: '결혼을 축복해주셔서 감사합니다 💛',
+          imageUrl: 'https://i.postimg.cc/KzTJs8bR/img-6.png',
           link: {
             webUrl: 'https://w-invitation-yjdb.vercel.app',
             mobileWebUrl: 'https://w-invitation-yjdb.vercel.app',

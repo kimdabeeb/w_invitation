@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import data from '../../data.json';
 import mainImg from '@/assets/images/img_1.jpg?url';
 import subImg from '@/assets/images/img_12.jpg?url';
-import { Paragraph3 } from '@/components/ContentsFont';
+import { Paragraph2 } from '@/components/ContentsFont';
 import { Wrap } from '@/components/ContentsWrap';
 import { BrideAndGroom } from '@/types/data.ts';
 
@@ -15,10 +15,10 @@ const Intro = () => {
 
   return (
     <>
-      <Wrap style={{ padding: 'calc(var(--el-between) * 3) calc(var(--el-between) * 2.5) 0' }}>
+      <Wrap style={{ padding: '0' }}>
         <Main>
-          <MainImg src={mainImg} />
-          <Paragraph3>love<br/>one<br/>another</Paragraph3>
+          <MainImg src={mainImg}/>
+          <Paragraph2>love<br/>one<br/>another</Paragraph2>
           <Bubble>
             <div className="bubble"></div>
             <div className="bubble"></div>
@@ -71,7 +71,7 @@ export default Intro;
 const MainImg = styled.img`
   width: 100%;
   max-width: 450px;
-  border-radius: 200px 200px 0 0;
+  /* border-radius: 200px 200px 0 0; */
   position: relative;
 `;
 
@@ -89,14 +89,14 @@ const Main = styled.div`
   left: 0;
     p {
       position: absolute;
-      top: -10px; 
+      top: 0px; 
       width: 100%;
       text-align: center;
       text-transform: capitalize;
-      line-height: 1.5;
-      letter-spacing: 2px;
-      font-size: 2.6rem;
-      color: #a9d4ff;
+      line-height: 1.45;
+      /* letter-spacing: 8px; */
+      font-size: 3rem;
+      color: #feffa9;
     }
 `;
 
@@ -147,11 +147,12 @@ const HostDetails = styled.b`
 
 const Bubble = styled.div`
   .bubble {
-    height: 40px;
-    width: 40px;
+    height: 25px;
+    width: 25px;
     border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 50%;
     position: absolute;
     animation: animate 10s linear infinite;
+    will-change: transform, opacity; 
   }
 `
