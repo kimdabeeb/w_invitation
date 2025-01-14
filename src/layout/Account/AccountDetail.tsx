@@ -1,8 +1,6 @@
 import styled from '@emotion/styled';
 import Copy from '@/assets/icons/copy.svg?react';
 import kakaopay from '@/assets/icons/kakaopay.svg?url';
-import toss from '@/assets/icons/toss.webp?url';
-
 interface IAccountProps {
   name: string;
   relation: string;
@@ -17,7 +15,6 @@ const AccountWrap = ({
   bank,
   account,
   kakaopayAccount,
-  tossAccount,
 }: IAccountProps) => {
   const handleCopy = () => {
     navigator.clipboard.writeText(account).then(
@@ -45,11 +42,6 @@ const AccountWrap = ({
           {kakaopayAccount && (
             <AccountButton href={kakaopayAccount} target="_blank" rel="noreferrer">
               <KakaopayImg src={kakaopay} alt="kakaopay" />
-            </AccountButton>
-          )}
-          {tossAccount && (
-            <AccountButton href={tossAccount} target="_blank" rel="noreferrer">
-              <TossImg src={toss} alt="toss" />
             </AccountButton>
           )}
         </AccountMethod>
@@ -132,9 +124,5 @@ const KakaopayImg = styled.img`
   background: var(--color-white2); 
 `;
 
-const TossImg = styled.img`
-  width: 70px;
-  background: var(--color-white2); 
-`;
 
 
