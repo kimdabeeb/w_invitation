@@ -59,9 +59,3 @@ export interface ILocationInfo {
   title: string;
   desc: string;
 }
-
-// declare global {
-//   interface Window {
-//     Kakao: any;
-//   }
-// }
