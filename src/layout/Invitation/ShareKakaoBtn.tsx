@@ -5,12 +5,14 @@ import { SubTitle } from '@/components/ContentsFont';
 
 const ShareKakaoBtn = () => {
   useEffect(() => {
+    window.Kakao.cleanup();
     const JAVASCRIPT_ID = import.meta.env.VITE_APP_KAKAOCOPY_CLIENT_ID;
-    console.log('카카오 JavaScript 키:', JAVASCRIPT_ID); 
+    window.Kakao.init(JAVASCRIPT_ID);
+    // console.log('카카오 JavaScript 키:', JAVASCRIPT_ID); 
 
-    if (window.Kakao && !window.Kakao.isInitialized()) {
-      window.Kakao.init(JAVASCRIPT_ID);
-    }
+    // if (window.Kakao && !window.Kakao.isInitialized()) {
+    //   window.Kakao.init(JAVASCRIPT_ID);
+    // }
   }, []);
 
   const kakaoBtn = () => {
@@ -28,8 +30,7 @@ const ShareKakaoBtn = () => {
         return;
       }
 
-      try {
-        window.Kakao.Share.sendDefault({
+      kakao.Share.sendDefault({
         objectType: 'feed',
         content: {
           title: '영준 ♥︎ 다빈이의 청첩장',
@@ -50,10 +51,7 @@ const ShareKakaoBtn = () => {
             },
           },
         ],
-      })
-      } catch (error) {
-        console.error('카카오 공유 실패:', error);
-      }
+      });
     }
   };
 
