@@ -12,7 +12,6 @@ interface IAccountProps {
 const AccountWrap = ({
   name,
   relation,
-  bank,
   account,
   kakaopayAccount,
 }: IAccountProps) => {
@@ -33,19 +32,22 @@ const AccountWrap = ({
         <Relation>{relation}</Relation>
         <Name>{name}</Name>
       </Info>
+      <DetailsWrapper>
       <Details>
-        {bank} {account}
         <AccountMethod>
-          <CopyButton onClick={handleCopy}>
+          계좌복사  <CopyButton onClick={handleCopy}>
           <Copy />
           </CopyButton>
-          {kakaopayAccount && (
+        </AccountMethod>
+      </Details>
+        {kakaopayAccount && (
+          <Details>
             <AccountButton href={kakaopayAccount} target="_blank" rel="noreferrer">
               <KakaopayImg src={kakaopay} alt="kakaopay" />
             </AccountButton>
-          )}
-        </AccountMethod>
-      </Details>
+          </Details>
+        )}
+      </DetailsWrapper>
     </AccordionCont>
   );
 };
@@ -54,7 +56,7 @@ export default AccountWrap;
 
 const AccordionCont = styled.div`
   background: var(--color-white);
-  padding: calc(var(--el-between)* 2);
+  padding: calc(var(--el-between)* 1.5);
   border-radius: var(--el-between);
   margin-bottom: calc(var(--el-between)* 2);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;  
@@ -67,32 +69,41 @@ const Info = styled.div`
 `;
 
 const Relation = styled.span`
-  font-size: .825rem;
+  font-size: .8rem;
   color: #444;
 `;
 
 const Name = styled.span`
-  font-size: 0.825rem;
+  font-size: 0.8rem;
   font-weight: 600;
 `;
 
+const DetailsWrapper = styled.div`
+  display: var(--el-flex);
+  gap: var(--el-between);
+  flex-wrap: wrap;
+  margin-top: calc(var(--el-between) * 2);
+`;
+
 const Details = styled.div`
+  flex: 1;
   display: var(--el-flex);
   align-items: var(--el-center);
   justify-content: space-between;
   white-space: nowrap;
   letter-spacing: .3px;
   font-size: 0.75rem;
+  letter-spacing: -.35px;
   background: var(--color-white2);
   margin-top: calc(var(--el-between)* 2);
-  padding: var(--el-between) calc(var(--el-between)* 2);
+  padding: var(--el-between) calc(var(--el-between) * 1.2);
   border-radius: var(--el-between);
 `;
 
 const AccountMethod = styled.div`
   display: var(--el-flex);
-  align-items: baseline;
-  justify-content: flex-end;
+  align-items: var(--el-center);
+  justify-content: space-between;
 `;
 
 const CopyButton = styled.button`
@@ -122,6 +133,7 @@ const AccountButton = styled.button`
 
 const KakaopayImg = styled.img`
   background: var(--color-white2); 
+  margin: 0 auto;
 `;
 
 
