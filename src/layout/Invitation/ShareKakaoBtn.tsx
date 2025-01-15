@@ -33,7 +33,7 @@ const ShareKakaoBtn = () => {
         objectType: 'feed',
         content: {
           title: '영준 ♥︎ 다빈 결혼합니다.',
-          description: ' 2025. 03. 01(토) 오후 3시 40분 \n 웨딩여율리',
+          description: ' 2025. 03. 01(토) 오후 3시 40분 웨딩여율리',
           imageUrl: 'https://i.postimg.cc/KzTJs8bR/img-6.png',
           link: {
             webUrl: 'https://w-invitation-yjdb.vercel.app',

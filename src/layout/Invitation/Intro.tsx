@@ -15,7 +15,7 @@ const Intro = () => {
 
   return (
     <>
-      <Wrap style={{ padding: '0 20px' }}>
+      <Wrap style={{ padding: 'calc(var(--el-between) * 3.8) calc(var(--el-between) * 2.5) 0'}}>
         <Main>
           <MainImg src={mainImg}/>
           <Paragraph3>love<br/>one<br/>another</Paragraph3>
@@ -73,13 +73,12 @@ const MainImg = styled.img`
   max-width: 450px;
   border-radius: 200px 200px 0 0;
   position: relative;
-  top: 0;
-  transform: translateY(9%);
 `;
 
 const SubImg = styled.img`
   width: 100%;
   max-width: 450px;
+  margin-top: 1rem;
   /* aspect-ratio: 1/1.75; */
 `;
 
@@ -91,14 +90,14 @@ const Main = styled.div`
   left: 0;
     p {
       position: absolute;
-      top: 0px; 
+      top: -1.6rem; 
       width: 100%;
       text-align: center;
       text-transform: capitalize;
       /* line-height: 1.425;
       font-size: 3rem; */
       line-height: 1.65;
-      font-size: 2.5rem;
+      font-size: 2.65rem;
       color: #3389d9;
     }
 `;
