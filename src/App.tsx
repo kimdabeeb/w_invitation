@@ -23,7 +23,7 @@ function App() {
       offset: 20, // pixel
       delay: 200,
       duration: 1200,
-      easing: 'ease-in-out',
+      easing: 'ease-in',
       once: true,
     });
     AOS.refreshHard();

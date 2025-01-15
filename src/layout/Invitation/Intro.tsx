@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import data from '../../data.json';
 import mainImg from '@/assets/images/img_1.jpg?url';
 import subImg from '@/assets/images/img_12.jpg?url';
-import { Paragraph2 } from '@/components/ContentsFont';
+import { Paragraph3 } from '@/components/ContentsFont';
 import { Wrap } from '@/components/ContentsWrap';
 import { BrideAndGroom } from '@/types/data.ts';
 
@@ -15,10 +15,10 @@ const Intro = () => {
 
   return (
     <>
-      <Wrap style={{ padding: '0' }}>
+      <Wrap style={{ padding: '0 20px' }}>
         <Main>
           <MainImg src={mainImg}/>
-          <Paragraph2>love<br/>one<br/>another</Paragraph2>
+          <Paragraph3>love<br/>one<br/>another</Paragraph3>
           <Bubble>
             <div className="bubble"></div>
             <div className="bubble"></div>
@@ -71,8 +71,10 @@ export default Intro;
 const MainImg = styled.img`
   width: 100%;
   max-width: 450px;
-  /* border-radius: 200px 200px 0 0; */
+  border-radius: 200px 200px 0 0;
   position: relative;
+  top: 0;
+  transform: translateY(9%);
 `;
 
 const SubImg = styled.img`
@@ -93,10 +95,11 @@ const Main = styled.div`
       width: 100%;
       text-align: center;
       text-transform: capitalize;
-      line-height: 1.45;
-      /* letter-spacing: 8px; */
-      font-size: 3rem;
-      color: #feffa9;
+      /* line-height: 1.425;
+      font-size: 3rem; */
+      line-height: 1.65;
+      font-size: 2.5rem;
+      color: #3389d9;
     }
 `;
 

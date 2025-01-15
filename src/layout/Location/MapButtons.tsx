@@ -22,19 +22,23 @@ const MapButton = styled.div`
 `;
 
 const Button = styled.button`
-  width: 50%;
-  margin: calc(var(--el-between) * 2) 0 calc(var(--el-between) * 3);
+  background: #fff;
+  padding: 5px;
+  border-radius: 8px;
+  width: 40%;
+  margin: calc(var(--el-between) * 2) auto calc(var(--el-between) * 2.5);
   font-family: var(--font-paragraph);
   outline: none;
-  box-shadow: none;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
   font-size: var(--font-size);
   display: var(--el-flex);
   align-items: var(--el-center);
+  justify-content: center;
   color: var(--color-black2);
   text-decoration: none;
-  gap: 10px;
+  gap: 9px;
   & img {
-    width: 25px;
+    width: 20px;
     aspect-ratio: 1/1;
   }
 `.withComponent('a');
