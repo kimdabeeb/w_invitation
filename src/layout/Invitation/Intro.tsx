@@ -97,7 +97,7 @@ const Main = styled.div`
       /* line-height: 1.425;
       font-size: 3rem; */
       line-height: 1.65;
-      font-size: 2.65rem;
+      font-size: 2.75rem;
       color: #3389d9;
     }
 `;
