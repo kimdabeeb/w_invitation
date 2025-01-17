@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import Copy from '@/assets/icons/copy.svg?react';
 import weddingVideo from '@/assets/video/weddingVideo.mp4'
-import { CustomEn, SubTitle } from '@/components/ContentsFont';
+import { CustomEn, Paragraph } from '@/components/ContentsFont';
 import ShareKakaoBtn from '@/layout/Invitation/ShareKakaoBtn';
 
 const ShareBox = () => {
@@ -23,7 +23,7 @@ const ShareBox = () => {
       <SnsCont>
         <ShareKakaoBtn />
         <CopyButton type="button" onClick={handleCopy}>
-          <SubTitle>청첩장 주소 복사하기</SubTitle>
+          <Paragraph>청첩장 주소 복사하기</Paragraph>
           <Copy />
         </CopyButton>
         <CustomEn>Copyright 2024. kimdabeen All rights reserved.</CustomEn>
@@ -60,4 +60,5 @@ const CopyButton = styled.button`
   align-items: var(--el-center);
   justify-content: space-between;
   cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
 `;

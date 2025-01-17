@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import styled from '@emotion/styled';
 import data from '../../data.json';
 import mainImg from '@/assets/images/img_1.jpg?url';
@@ -9,6 +10,42 @@ import { BrideAndGroom } from '@/types/data.ts';
 
 const Intro = () => {
   const { groom, bride } = data.greeting.host;
+
+  const fullText = ['love', 'one', 'another'];
+  const [text, setText] = useState<string[]>([]);
+  const [wordIndex, setWordIndex] = useState<number>(0);  // 단어 인덱스
+  const [charIndex, setCharIndex] = useState<number>(0); 
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (wordIndex < fullText.length) {
+        const currentWord = fullText[wordIndex];
+        
+        setText((prevText) => {
+          const newText = [...prevText];
+          if (newText[wordIndex] === undefined) {
+            newText[wordIndex] = '';
+          }
+          newText[wordIndex] += currentWord[charIndex];
+          return newText;
+        });
+
+        if (charIndex < currentWord.length - 1) {
+          setCharIndex((prev) => prev + 1);
+        } else {
+          setCharIndex(0);
+          setWordIndex((prev) => prev + 1);
+        }
+      } else {
+        // 모든 단어가 출력되면 interval 종료
+        clearInterval(interval);
+      }
+    }, 150);
+
+    return () => clearInterval(interval);
+  }, [wordIndex, charIndex]); 
+
+
   const Host = ({ person }: { person: BrideAndGroom }) => {
     return <HostDetails>{person.name}</HostDetails>;
   };
@@ -18,15 +55,19 @@ const Intro = () => {
       <Wrap style={{ padding: 'calc(var(--el-between) * 3.8) calc(var(--el-between) * 2.5) 0'}}>
         <Main>
           <MainImg src={mainImg}/>
-          <Paragraph3>love<br/>one<br/>another</Paragraph3>
-          <Bubble>
-            <div className="bubble"></div>
-            <div className="bubble"></div>
-            <div className="bubble"></div>
-            <div className="bubble"></div>
-            <div className="bubble"></div>
-            <div className="bubble"></div>
-            <div className="bubble"></div>
+          {/* <Paragraph3>love<br/>one<br/>another</Paragraph3> */}
+            <div>{text.map((word, index) => (
+              <Paragraph3 key={index}>{word}</Paragraph3>
+              ))}
+            </div>          
+            <Bubble>
+              <div className="bubble"></div>
+              <div className="bubble"></div>
+              <div className="bubble"></div>
+              <div className="bubble"></div>
+              <div className="bubble"></div>
+              <div className="bubble"></div>
+              <div className="bubble"></div>
           </Bubble>
         </Main>
         <Invitation data-aos="fade">
@@ -88,7 +129,7 @@ const Main = styled.div`
   position: relative;
   top: 0;
   left: 0;
-    p {
+    > div:first-of-type {
       position: absolute;
       top: -1.6rem; 
       width: 100%;
@@ -99,7 +140,7 @@ const Main = styled.div`
       line-height: 1.65;
       font-size: 2.75rem;
       color: #3389d9;
-    }
+    } 
 `;
 
 const Invitation = styled.ul`

@@ -1,13 +1,12 @@
 import { useEffect } from 'react';
 import styled from '@emotion/styled';
 import UpNarrow from '@/assets/icons/upnarrow.png?url';
-import { SubTitle } from '@/components/ContentsFont';
+import { Paragraph } from '@/components/ContentsFont';
 
 const ShareKakaoBtn = () => {
   useEffect(() => {
     window.Kakao.cleanup();
     const JAVASCRIPT_ID = import.meta.env.VITE_APP_KAKAOCOPY_CLIENT_ID;
-    console.log('카카오 JavaScript 키:', JAVASCRIPT_ID); 
 
     if (window.Kakao && !window.Kakao.isInitialized()) {
       window.Kakao.init(JAVASCRIPT_ID);
@@ -55,7 +54,7 @@ const ShareKakaoBtn = () => {
 
   return (
     <KakaoButton onClick={kakaoBtn}>
-      <SubTitle>카카오톡으로 전하기</SubTitle>
+      <Paragraph>카카오톡으로 전하기</Paragraph>
       <img src={UpNarrow} />
     </KakaoButton>
   );
@@ -75,6 +74,7 @@ const KakaoButton = styled.button`
   display: var(--el-flex);
   align-items: var(--el-center);
   justify-content: space-between;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
   & img {
     width: calc(var(--el-between) * 2);
     height: calc(var(--el-between) * 2);

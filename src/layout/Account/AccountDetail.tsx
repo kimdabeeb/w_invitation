@@ -12,6 +12,7 @@ interface IAccountProps {
 const AccountWrap = ({
   name,
   relation,
+  bank,
   account,
   kakaopayAccount,
 }: IAccountProps) => {
@@ -35,13 +36,13 @@ const AccountWrap = ({
       <DetailsWrapper>
       <Details>
         <AccountMethod>
-          계좌복사  <CopyButton onClick={handleCopy}>
+          {bank} {account} <CopyButton onClick={handleCopy}>
           <Copy />
           </CopyButton>
         </AccountMethod>
       </Details>
         {kakaopayAccount && (
-          <Details>
+          <Details id='kakaobtn'>
             <AccountButton href={kakaopayAccount} target="_blank" rel="noreferrer">
               <KakaopayImg src={kakaopay} alt="kakaopay" />
             </AccountButton>
@@ -60,6 +61,7 @@ const AccordionCont = styled.div`
   border-radius: var(--el-between);
   margin-bottom: calc(var(--el-between)* 2);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;  
+  color: var(--color-black2);
 `;
 
 const Info = styled.div`
@@ -75,14 +77,15 @@ const Relation = styled.span`
 
 const Name = styled.span`
   font-size: 0.8rem;
-  font-weight: 600;
+  font-weight: 400;
+  color: var(--color-black);
+  letter-spacing: .35px;
 `;
 
 const DetailsWrapper = styled.div`
-  display: var(--el-flex);
+  /* display: var(--el-flex); */
   gap: var(--el-between);
   flex-wrap: wrap;
-  margin-top: calc(var(--el-between) * 2);
 `;
 
 const Details = styled.div`
@@ -93,9 +96,8 @@ const Details = styled.div`
   white-space: nowrap;
   letter-spacing: .3px;
   font-size: 0.75rem;
-  letter-spacing: -.35px;
   background: var(--color-white2);
-  margin-top: calc(var(--el-between)* 2);
+  margin-top: calc(var(--el-between)* 3);
   padding: var(--el-between) calc(var(--el-between) * 1.2);
   border-radius: var(--el-between);
 `;
