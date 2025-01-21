@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import styled from '@emotion/styled';
 import data from '../../data.json';
-import mainImg from '@/assets/images/img_1.jpg?url';
+import mainImg from '@/assets/images/img_1.webp?url';
 import subImg from '@/assets/images/img_12.jpg?url';
 import { Paragraph3 } from '@/components/ContentsFont';
 import { Wrap } from '@/components/ContentsWrap';
@@ -17,8 +17,11 @@ const Intro = () => {
   const [charIndex, setCharIndex] = useState<number>(0); 
 
   useEffect(() => {
-    const preloadImage = new Image();
-    preloadImage.src = mainImg;
+    const img = new Image();
+    img.src = mainImg;
+    img.onload = () => {
+      document.querySelector('.main')?.classList.add('loaded');
+    };
 
     const interval = setInterval(() => {
       if (wordIndex < fullText.length) {
@@ -56,7 +59,7 @@ const Intro = () => {
   return (
     <>
       <Wrap style={{ padding: 'calc(var(--el-between) * 3.8) calc(var(--el-between) * 2.5) 0'}}>
-        <Main>
+        <Main className="main">
           {/* <MainImg src={mainImg}/> */}
           {/* <Paragraph3>love<br/>one<br/>another</Paragraph3> */}
             <div>{text.map((word, index) => (
@@ -138,7 +141,9 @@ const Main = styled.div`
   background-position: center;
   background-size: contain;
   border-radius: 200px 200px 0 0;
-  z-index: 100000;
+  &.loaded {
+    background-image: url(${mainImg}); /* 고해상도 */
+  }
     > div:first-of-type {
       position: absolute;
       top: -1.6rem; 
