@@ -31,6 +31,22 @@ const PhotoGallery = () => {
     maxHeight: '100%',
   };
 
+  const handleModalEvents = (instance: any) => {
+    const modalEl = instance.pswp?.element;
+
+    if (modalEl) {
+      modalEl.classList.add('modal-loading');
+      instance.pswp?.on('afterChange', () => {
+        modalEl.classList.remove('modal-loading');
+      });
+
+      // 확대/축소 및 더블클릭 방지
+      modalEl.addEventListener('dblclick', (e: MouseEvent) => e.preventDefault());
+      modalEl.addEventListener('wheel', (e: WheelEvent) => e.preventDefault());
+      modalEl.addEventListener('touchmove', (e: TouchEvent) => e.preventDefault());
+    }
+  };
+
   return (
     <Wrap style={{ paddingLeft: '0', paddingRight: '0'}}>
       <div data-aos="fade-up">
@@ -41,16 +57,18 @@ const PhotoGallery = () => {
         </TitleCont> */}
       </div>
       <Wrap data-aos="fade-up" style={{ padding: '0 0 3rem 0' }}>
-        <Gallery options={options}
-          onOpen={(instance) => {
-            const modalEl = instance.pswp?.element;
+        <Gallery 
+          options={options}
+          onOpen={handleModalEvents}
+          // onOpen={(instance) => {
+          //   const modalEl = instance.pswp?.element;
 
-            if (modalEl && instance.pswp) {
-              modalEl.addEventListener('click', () => {
-                instance.pswp?.close();
-              });
-            }
-          }}
+          //   if (modalEl && instance.pswp) {
+          //     modalEl.addEventListener('click', () => {
+          //       instance.pswp?.close();
+          //     });
+          //   }
+          // }}
         >
           <Swiper
             modules={[Navigation, Pagination]}
@@ -80,6 +98,8 @@ const PhotoGallery = () => {
                         src={image.source}
                         ref={ref as React.MutableRefObject<HTMLImageElement>}
                         onClick={open}
+                        draggable={false} 
+                        onDoubleClick={(e) => e.preventDefault()} 
                         // onClick={() => handleItemClick(open)}
                       />
                     )}

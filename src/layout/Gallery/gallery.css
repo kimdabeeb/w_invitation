@@ -65,15 +65,21 @@
   margin-left: 15px;
 }
 
-.pswp--click-to-zoom.pswp--zoomed-in .pswp__zoom-wrap,
-.pswp--click-to-zoom.pswp--zoom-allowed .pswp__img {
-  height: auto!important;
-}
 
+.pswp--click-to-zoom.pswp--zoomed-in .pswp__zoom-wrap ,
 .pswp--click-to-zoom.pswp--zoom-allowed .pswp__img {
   position: absolute;
-  top: 50%;
+  height: auto!important;
+  top: 51%;
   transform: translateY(-50%);
+  visibility: visible;
+  opacity: 1;
+} 
+
+.pswp__container,
+.pswp__img {
+  touch-action: none; /* 터치 확대/축소 방지 */
+  pointer-events: none; /* 클릭 방지 */
 }
 
 .pswp__zoom-wrap {
