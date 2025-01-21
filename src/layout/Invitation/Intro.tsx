@@ -199,10 +199,45 @@ const Bubble = styled.div`
   .bubble {
     height: 25px;
     width: 25px;
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 50%;
     position: absolute;
     animation: animate 10s linear infinite;
     will-change: transform, opacity; 
   }
+  .bubble:nth-of-type(1) {
+        top: 20%;
+        left: 20%;
+        animation-delay: 8s;
+      }
+      .bubble:nth-of-type(2) {
+        top: 60%;
+        left: 80%;
+        animation-delay: 10s;
+      }
+      .bubble:nth-of-type(3) {
+        top: 40%;
+        left: 40%;
+        animation-delay: 3s;
+      }
+      .bubble:nth-of-type(4) {
+        top: 66%;
+        left: 30%;
+        animation-delay: 7s;
+      }
+      .bubble:nth-of-type(5) {
+        top: 90%;
+        left: 10%;
+        animation-delay: 9s;
+      }
+      .bubble:nth-of-type(6) {
+        top: 50%;
+        left: 50%;
+        animation-delay: 5s;
+      }
+      .bubble:nth-of-type(7) {
+        top: 75%;
+        left: 60%;
+        animation-delay: 8s;
+      }
 `

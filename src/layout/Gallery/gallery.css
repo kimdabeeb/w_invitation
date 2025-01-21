@@ -70,9 +70,17 @@
   height: auto!important;
 }
 
+.pswp--click-to-zoom.pswp--zoom-allowed .pswp__img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .pswp__zoom-wrap {
   pointer-events: none !important;
   transform: none !important;
+  position: relative;
+  height: 100% !important;
 }
 
 .pswp--click-to-zoom.pswp--zoomed-in .pswp__zoom-wrap, 
