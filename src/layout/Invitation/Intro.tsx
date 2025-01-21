@@ -54,7 +54,7 @@ const Intro = () => {
     <>
       <Wrap style={{ padding: 'calc(var(--el-between) * 3.8) calc(var(--el-between) * 2.5) 0'}}>
         <Main>
-          <MainImg src={mainImg}/>
+          {/* <MainImg src={mainImg}/> */}
           {/* <Paragraph3>love<br/>one<br/>another</Paragraph3> */}
             <div>{text.map((word, index) => (
               <Paragraph3 key={index}>{word}</Paragraph3>
@@ -109,12 +109,12 @@ const Intro = () => {
 
 export default Intro;
 
-const MainImg = styled.img`
-  width: 100%;
-  max-width: 450px;
-  border-radius: 200px 200px 0 0;
-  position: relative;
-`;
+// const MainImg = styled.img`
+//   width: 100%;
+//   max-width: 450px;
+//   border-radius: 200px 200px 0 0;
+//   position: relative;
+// `;
 
 const SubImg = styled.img`
   width: 100%;
@@ -129,17 +129,24 @@ const Main = styled.div`
   position: relative;
   top: 0;
   left: 0;
+  aspect-ratio: 1 / 1.35;
+  background-image: url(${mainImg});
+  backface-visibility: visible;
+  background-position: center;
+  background-size: contain;
+  border-radius: 200px 200px 0 0;
+  z-index: 100000;
     > div:first-of-type {
       position: absolute;
       top: -1.6rem; 
       width: 100%;
-      text-align: center;
-      text-transform: capitalize;
-      /* line-height: 1.425;
-      font-size: 3rem; */
-      line-height: 1.65;
-      font-size: 2.75rem;
-      color: #3389d9;
+      > p {
+        text-align: center;
+        text-transform: capitalize;
+        line-height: 1.65;
+        font-size: 2.65rem;
+        color: #3389d9;
+      }
     } 
 `;
 

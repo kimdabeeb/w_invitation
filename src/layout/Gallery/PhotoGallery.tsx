@@ -16,13 +16,18 @@ const PhotoGallery = () => {
     arrowNext: false,
     zoom: false,
     maxSpreadZoom: 1,
+    pinchToClose: false,
     allowUserZoom: false,
+    wheelToZoom: false,
+    closeOnScroll: false,
   }
 
   const smallItemStyles: React.CSSProperties = {
     cursor: 'none',
     objectFit: 'contain',
     width: '100%',
+    // height: 'auto', 
+    // maxWidth: '100%',
     maxHeight: '100%',
   };
 
@@ -36,7 +41,17 @@ const PhotoGallery = () => {
         </TitleCont> */}
       </div>
       <Wrap data-aos="fade-up" style={{ padding: '0 0 3rem 0' }}>
-        <Gallery options={options}>
+        <Gallery options={options}
+          onOpen={(instance) => {
+            const modalEl = instance.pswp?.element;
+
+            if (modalEl && instance.pswp) {
+              modalEl.addEventListener('click', () => {
+                instance.pswp?.close();
+              });
+            }
+          }}
+        >
           <Swiper
             modules={[Navigation, Pagination]}
             style={{ overflow: 'visible' }}
@@ -53,13 +68,18 @@ const PhotoGallery = () => {
               return (
                 <SwiperSlide key={index}>
                   {/* <Item original={image.source} thumbnail={image.source} width="1920" height="1280"> */}
-                  <Item original={image.source} thumbnail={image.source} width="1920" height="1280">
-                    {({ ref }) => (
+                  <Item 
+                    original={image.source} 
+                    thumbnail={image.source} 
+                    width="1920" height="1280"
+                    >
+                    {({ ref, open }) => (
                       <img
                         style={smallItemStyles}
                         alt={image.alt}
                         src={image.source}
                         ref={ref as React.MutableRefObject<HTMLImageElement>}
+                        onClick={open}
                         // onClick={() => handleItemClick(open)}
                       />
                     )}
