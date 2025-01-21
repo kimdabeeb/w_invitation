@@ -72,16 +72,27 @@
 }
 
 .pswp--click-to-zoom.pswp--zoomed-in .pswp__zoom-wrap ,
-.pswp--click-to-zoom.pswp--zoom-allowed .pswp__img {
+.pswp--click-to-zoom.pswp--zoomed-in .pswp__zoom-wrap .pswp__img
+/* .pswp--click-to-zoom.pswp--zoom-allowed .pswp__img*/ { 
   position: absolute;
+  width: 100%!important;
   height: auto!important;
   top: 51%;
   transform: translateY(-50%);
   visibility: visible;
-  opacity: 1;
   touch-action: none!important; /* 터치 확대/축소 방지 */
   pointer-events: none!important; /* 클릭 방지 */
+  cursor: none!important;
 } 
+
+.pswp--click-to-zoom.pswp--zoom-allowed .pswp__img {
+  height: auto!important;
+  top: 51%;
+  transform: translateY(-50%);
+  touch-action: none!important; /* 터치 확대/축소 방지 */
+  pointer-events: none!important; /* 클릭 방지 */
+  cursor: none!important;
+}
 
 .pswp__zoom-wrap {
   pointer-events: none !important;
@@ -90,9 +101,9 @@
   height: 100% !important;
 }
 
-.pswp--click-to-zoom.pswp--zoomed-in .pswp__zoom-wrap, 
+/* .pswp--click-to-zoom.pswp--zoomed-in .pswp__zoom-wrap, 
 .pswp--click-to-zoom.pswp--zoomed-in .pswp__zoom-wrap .pswp__img{
   pointer-events: none !important;
   transform: none!important;
   width: 100%!important;
-}
+} */
