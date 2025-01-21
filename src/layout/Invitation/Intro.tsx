@@ -15,14 +15,17 @@ const Intro = () => {
   const [text, setText] = useState<string[]>([]);
   const [wordIndex, setWordIndex] = useState<number>(0);  // 단어 인덱스
   const [charIndex, setCharIndex] = useState<number>(0); 
+  const [isImageLoaded, setIsImageLoaded] = useState(false); 
 
   useEffect(() => {
     const img = new Image();
     img.src = mainImg;
     img.onload = () => {
-      document.querySelector('.main')?.classList.add('loaded');
+      setIsImageLoaded(true); 
     };
+  }, []);
 
+  useEffect(() => {
     const interval = setInterval(() => {
       if (wordIndex < fullText.length) {
         const currentWord = fullText[wordIndex];
@@ -62,7 +65,7 @@ const Intro = () => {
         <Main className="main">
           {/* <MainImg src={mainImg}/> */}
           {/* <Paragraph3>love<br/>one<br/>another</Paragraph3> */}
-            <div>{text.map((word, index) => (
+            {/* <div>{text.map((word, index) => (
               <Paragraph3 key={index}>{word}</Paragraph3>
               ))}
             </div>          
@@ -74,7 +77,25 @@ const Intro = () => {
               <div className="bubble"></div>
               <div className="bubble"></div>
               <div className="bubble"></div>
-          </Bubble>
+          </Bubble> */}
+
+          {isImageLoaded && (
+            <>
+              <div>{text.map((word, index) => (
+                <Paragraph3 key={index}>{word}</Paragraph3>
+              ))}
+              </div>          
+              <Bubble>
+                <div className="bubble"></div>
+                <div className="bubble"></div>
+                <div className="bubble"></div>
+                <div className="bubble"></div>
+                <div className="bubble"></div>
+                <div className="bubble"></div>
+                <div className="bubble"></div>
+              </Bubble>
+            </>
+          )}
         </Main>
         <Invitation data-aos="fade">
           <li data-aos="fade" data-aos-delay="100">
