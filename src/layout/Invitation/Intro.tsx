@@ -17,6 +17,9 @@ const Intro = () => {
   const [charIndex, setCharIndex] = useState<number>(0); 
 
   useEffect(() => {
+    const preloadImage = new Image();
+    preloadImage.src = mainImg;
+
     const interval = setInterval(() => {
       if (wordIndex < fullText.length) {
         const currentWord = fullText[wordIndex];
@@ -130,7 +133,7 @@ const Main = styled.div`
   top: 0;
   left: 0;
   aspect-ratio: 1 / 1.35;
-  background-image: url(${mainImg});
+  background-image: url(${mainImg}) /* Placeholder */;
   backface-visibility: visible;
   background-position: center;
   background-size: contain;
